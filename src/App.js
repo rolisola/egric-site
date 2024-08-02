@@ -50,7 +50,7 @@ const App = () => (
         url: 'mailto:egric.espeleogrupo@gmail.com',
         image: 'https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000',
       },{
-        url:'https://wa.me/+5519998288653',
+        url:'https://wa.me/+5519983531622',
         image:'https://img.icons8.com/?size=100&id=16466&format=png&color=00ff00'
       }
     ]}
