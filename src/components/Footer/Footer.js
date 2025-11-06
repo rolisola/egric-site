@@ -45,7 +45,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   title="Ver no Google Maps"
                 >
-                  Av. 24A nº 1515, Bela Vista, Rio Claro - SP, Brasil
+                  Av. 24 A, 1515 - Bela Vista, Rio Claro - SP, CEP 13506-900
                 </a>
               </li>
               <li>
@@ -64,21 +64,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Seção Links Rápidos 
-          <div className="footer-section footer-links">
-            <h3>Links Rápidos</h3>
-            <ul className="footer-menu">
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#egric">Sobre o EGRIC</a></li>
-              <li><a href="#espeleologia">Espeleologia</a></li>
-              <li><a href="#cursos">Cursos</a></li>
-              <li><a href="#calendario">Calendário</a></li>
-              <li><a href="#cartilhas">Cartilhas</a></li>
-              <li><a href="#galeria">Galeria</a></li>
-              <li><a href="#comissoes">Comissões</a></li>
-            </ul>
-          </div>*/}
 
           {/* Seção Redes Sociais */}
           <div className="footer-section footer-social">
