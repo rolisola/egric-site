@@ -1,4 +1,5 @@
 import React from 'react';
+import logoBranco from '../../assets/img/logo_atual_branco.png';
 import './Footer.css';
 import { 
   FaFacebook, 
@@ -29,7 +30,7 @@ const Footer = () => {
               do patrimônio espeleológico brasileiro desde sua fundação.
             </p>
             <div className="footer-logo">
-              <img src={require('../../assets/img/logo_atual_branco.png')} alt="EGRIC Logo" />
+              <img src={logoBranco} alt="EGRIC Logo" />
             </div>
           </div>
 

@@ -1,73 +1,136 @@
-# egric-site
-Site institucional para o EGRIC feito em REACTJS e algum CMS a definir
+# EGRIC Site
 
-# Getting Started with Create React App
+Site institucional para o EGRIC (Espeleogrupo Rio Claro) desenvolvido em React + Vite.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🦇 Sobre o Projeto
 
-## Available Scripts
+Site oficial do Espeleogrupo Rio Claro, uma organização dedicada à exploração, pesquisa e conservação do patrimônio espeleológico brasileiro.
 
-In the project directory, you can run:
+## ⚡ Tecnologias
 
-### `yarn start`
+Este projeto utiliza:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **[React](https://react.dev/)** - Biblioteca JavaScript para interfaces
+- **[Vite](https://vite.dev/)** - Build tool ultrarrápido
+- **[React Icons](https://react-icons.github.io/react-icons/)** - Ícones para React
+- **[Yarn](https://yarnpkg.com/)** - Gerenciador de pacotes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Como Executar
 
-### `yarn test`
+### Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 18+
+- Yarn 4+
+
+### Instalação
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/rolisola/egric-site.git
+cd egric-site
+yarn install
+```
+
+## 📜 Scripts Disponíveis
+
+No diretório do projeto, você pode executar:
+
+### `yarn dev`
+
+Executa o aplicativo em modo de desenvolvimento.\
+Abra [http://localhost:5173](http://localhost:5173) para visualizá-lo no navegador.
+
+A página recarrega automaticamente quando você faz alterações.\
+Você também verá erros de lint no console.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Compila o aplicativo para produção na pasta `build`.\
+Ele agrupa corretamente o React no modo de produção e otimiza a compilação para melhor desempenho.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A compilação é minificada e os nomes dos arquivos incluem hashes.\
+Seu aplicativo está pronto para ser implantado!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn preview`
 
-### `yarn eject`
+Visualiza a versão de produção localmente.\
+Execute após `yarn build` para testar a build de produção.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔧 Configuração
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Vite
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A configuração do Vite está em `vite.config.js`. Este projeto usa:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react)** - Plugin oficial React para Vite
+- **Fast Refresh** - HMR (Hot Module Replacement) instantâneo
 
-## Learn More
+### ESLint
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A configuração do ESLint está em `eslint.config.js`. Para expandir a configuração, consulte a [documentação do ESLint](https://eslint.org/docs/latest/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Deploy
 
-### Code Splitting
+### Cloudflare Pages (Recomendado)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Este projeto está configurado para deploy no Cloudflare Pages:
 
-### Analyzing the Bundle Size
+```yaml
+Build command: yarn build
+Build output directory: build
+Node version: 18
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Outras Plataformas
 
-### Making a Progressive Web App
+O projeto também pode ser hospedado em:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
 
-### Advanced Configuration
+## 📚 Saiba Mais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para aprender mais sobre as tecnologias utilizadas:
 
-### Deployment
+- [Documentação do Vite](https://vite.dev/guide/)
+- [Documentação do React](https://react.dev/)
+- [Guia de Deploy do Vite](https://vite.dev/guide/static-deploy.html)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Progressive Web App (PWA)
 
-### `yarn build` fails to minify
+Este projeto inclui um `manifest.json` para funcionalidades PWA básicas.\
+Para recursos avançados de PWA, consulte o plugin [vite-plugin-pwa](https://vite-pwa-org.netlify.app/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Estrutura do Projeto
+
+```txt
+egric-site/
+├── public/              # Arquivos estáticos
+│   ├── manifest.json
+│   └── favicon.ico
+├── src/                 # Código-fonte
+│   ├── components/      # Componentes React
+│   │   ├── Header/
+│   │   └── Footer/
+│   ├── pages/          # Páginas
+│   ├── assets/         # Imagens e recursos
+│   ├── App.js          # Componente principal
+│   └── index.js        # Ponto de entrada
+├── index.html          # Template HTML
+├── vite.config.js      # Configuração do Vite
+└── package.json        # Dependências
+```
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+
+## 📄 Licença
+
+Este projeto pertence ao EGRIC - Espeleogrupo Rio Claro.
+
+---
+
+**Desenvolvido com ♥ para a comunidade espeleológica brasileira** 🦇
