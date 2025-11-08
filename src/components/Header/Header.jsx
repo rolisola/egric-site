@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoBranco from '../../assets/img/logo_atual_branco.png';
 import './Header.css';
 
 const Header = () => {
@@ -27,7 +28,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src={require('../../assets/img/logo_atual_branco.png')} alt="EGRIC Logo" />
+          <img src={logoBranco} alt="EGRIC Logo" />
           {/*<span className="logo-text">EGRIC</span>*/}
         </div>
 
