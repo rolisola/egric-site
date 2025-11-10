@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import Cartilhas from './pages/Cartilhas/Cartilhas.jsx';
 import './App.css';
 
 function App() {
@@ -72,12 +73,7 @@ function App() {
         </section>
 
         {/* Seção Cartilhas */}
-        <section id="cartilhas" className="section">
-          <div className="container">
-            <h2>Cartilhas</h2>
-            <p>Material educativo sobre espeleologia e conservação.</p>
-          </div>
-        </section>
+        <Cartilhas />
 
         {/* Seção Galeria */}
         <section id="galeria" className="section section-gallery">
@@ -88,10 +84,35 @@ function App() {
         </section>
 
         {/* Seção Comissões */}
-        <section id="comissoes" className="section">
+        <section id="comissoes" className="section section-comissoes">
           <div className="container">
             <h2>Comissões</h2>
-            <p>Conheça as comissões e grupos de trabalho do EGRIC.</p>
+            <p className="subtitle">Conheça as comissões e grupos de trabalho do EGRIC.</p>
+
+            <div className="comissoes-grid">
+              <article id="comissao-cursos" className="comissao-card">
+                <h3>Comissão de Cursos</h3>
+                <p>Organiza e executa cursos e treinamentos técnicos do grupo, capacitando novos membros e aprimorando conhecimentos dos espeleólogos.</p>
+              </article>
+
+              <article id="comissao-educacao" className="comissao-card">
+                <h3>Comissão de Educação</h3>
+                <p>
+                  Responsável pelos materiais educativos do EGRIC, como as{' '}
+                  <a href="#cartilhas" className="link-destaque">Cartilhas</a>, promovendo a disseminação de conhecimento sobre espeleologia e conservação.
+                </p>
+              </article>
+
+              <article id="comissao-marketing" className="comissao-card">
+                <h3>Comissão de Marketing</h3>
+                <p>Cuida da comunicação, identidade visual e divulgação das atividades do EGRIC nas redes sociais e demais canais.</p>
+              </article>
+
+              <article id="comissao-tecnica" className="comissao-card">
+                <h3>Comissão Técnica Científica</h3>
+                <p>Desenvolve pesquisas, documentação e padronização técnico-científica das atividades espeleológicas do grupo.</p>
+              </article>
+            </div>
           </div>
         </section>
 

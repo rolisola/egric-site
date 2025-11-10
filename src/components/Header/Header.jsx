@@ -71,7 +71,10 @@ const Header = () => {
               onMouseEnter={() => !mobileMenuOpen && setActiveDropdown('cartilhas')}
               onMouseLeave={() => !mobileMenuOpen && closeDropdown()}
             >
-              <button className="dropdown-toggle" onClick={() => toggleDropdown('cartilhas')}>
+              <button className="dropdown-toggle" onClick={() => {
+                toggleDropdown('cartilhas');
+                if (!mobileMenuOpen) window.location.hash = 'cartilhas';
+              }}>
                 CARTILHAS <span className="arrow">▼</span>
               </button>
               <ul className="dropdown-menu">
@@ -95,9 +98,9 @@ const Header = () => {
                 COMISSÕES <span className="arrow">▼</span>
               </button>
               <ul className="dropdown-menu">
-                <li><a href="#comissao-eventos" onClick={closeMobileMenu}>COMISSÃO DE CURSOS</a></li>
-                <li><a href="#comissao-comunicacao" onClick={closeMobileMenu}>COMISSÃO DE EDUCAÇÃO</a></li>
-                <li><a href="#comissao-cientifica" onClick={closeMobileMenu}>COMISSÃO DE MARKETING</a></li>
+                <li><a href="#comissao-cursos" onClick={closeMobileMenu}>COMISSÃO DE CURSOS</a></li>
+                <li><a href="#comissao-educacao" onClick={closeMobileMenu}>COMISSÃO DE EDUCAÇÃO</a></li>
+                <li><a href="#comissao-marketing" onClick={closeMobileMenu}>COMISSÃO DE MARKETING</a></li>
                 <li><a href="#comissao-tecnica" onClick={closeMobileMenu}>COMISSÃO TÉCNICA CIENTÍFICA</a></li>
               </ul>
             </li>

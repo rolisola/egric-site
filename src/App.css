@@ -145,6 +145,95 @@
   }
 }
 
+/* Seção Comissões */
+.section-comissoes {
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.8) 0%, rgba(36, 36, 62, 0.8) 100%);
+  position: relative;
+}
+
+.section-comissoes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(253, 200, 48, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.comissoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.comissao-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(253, 200, 48, 0.25);
+  border-radius: 18px;
+  padding: 32px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.comissao-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35 0%, #fdc830 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.comissao-card:hover {
+  transform: translateY(-12px);
+  border-color: #fdc830;
+  box-shadow: 0 20px 40px rgba(253, 200, 48, 0.35);
+}
+
+.comissao-card:hover::before {
+  transform: scaleX(1);
+}
+
+.comissao-card h3 {
+  color: #fdc830;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.comissao-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.link-destaque {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.link-destaque:hover {
+  color: #fdc830;
+  border-bottom-color: #fdc830;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .main-content {
@@ -168,8 +257,21 @@
     font-size: 1rem;
   }
 
-  .courses-grid {
+  .courses-grid,
+  .comissoes-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .comissao-card {
+    padding: 24px;
+  }
+
+  .comissao-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .comissao-card p {
+    font-size: 0.95rem;
   }
 }
