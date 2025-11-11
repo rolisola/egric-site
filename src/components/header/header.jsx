@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logoBranco from '../../assets/img/logo_atual_branco.png';
-import './Header.css';
+import './header.css';
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);

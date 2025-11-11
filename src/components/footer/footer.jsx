@@ -1,6 +1,6 @@
 import React from 'react';
 import logoBranco from '../../assets/img/logo_atual_branco.png';
-import './Footer.css';
+import './footer.css';
 import { 
   FaFacebook, 
   FaInstagram, 

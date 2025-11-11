@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import './Cartilhas.css';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import './cartilhas.css';
 
 // Configurar o worker do PDF.js
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -68,8 +70,10 @@ const Cartilhas = () => {
   };
 
   return (
-    <section id="cartilhas" className="cartilhas-section">
-      <div className="container">
+    <div className="App">
+      <Header />
+      <section id="cartilhas" className="cartilhas-section">
+        <div className="container">
         <div className="cartilhas-header">
           <h2>Cartilhas Educativas</h2>
           <p className="subtitle">
@@ -225,8 +229,10 @@ const Cartilhas = () => {
             </div>
           </div>
         )}
-      </div>
-    </section>
+        </div>
+      </section>
+      <Footer />
+    </div>
   );
 };
 

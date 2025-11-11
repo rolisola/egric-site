@@ -1,21 +1,16 @@
 import React from 'react';
-import Routes from "./routes/routes.jsx"
-import './App.css';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
-function App() {
-  return <Routes />;
-}
-export default App;
-
-{/*function App() {
+export default function Home() {
   return (
     <div className="App">
       <Header />
       
-      {/* Main Content }
+      {/* Main Content */}
       <main className="main-content">
         
-        {/* Seção Início }
+        {/* Seção Início */}
         <section id="inicio" className="section section-home">
           <div className="container">
             <h1>Bem-vindo ao EGRIC</h1>
@@ -24,7 +19,7 @@ export default App;
           </div>
         </section>
 
-        {/* Seção EGRIC }
+        {/* Seção EGRIC */}
         <section id="egric" className="section section-about">
           <div className="container">
             <h2>Sobre o EGRIC</h2>
@@ -39,7 +34,7 @@ export default App;
           </div>
         </section>
 
-        {/* Seção Espeleologia }
+        {/* Seção Espeleologia */}
         <section id="espeleologia" className="section">
           <div className="container">
             <h2>Espeleologia</h2>
@@ -50,7 +45,7 @@ export default App;
           </div>
         </section>
 
-        {/* Seção Cursos }
+        {/* Seção Cursos */}
         <section id="cursos" className="section section-courses">
           <div className="container">
             <h2>Cursos</h2>
@@ -67,18 +62,7 @@ export default App;
           </div>
         </section>
 
-        {/* Seção Calendário }
-        <section id="calendario" className="section">
-          <div className="container">
-            <h2>Calendário</h2>
-            <p>Confira nossas próximas expedições e atividades.</p>
-          </div>
-        </section>
-
-        {/* Seção Cartilhas }
-        <Cartilhas />
-
-        {/* Seção Galeria }
+        {/* Seção Galeria */}
         <section id="galeria" className="section section-gallery">
           <div className="container">
             <h2>Galeria</h2>
@@ -86,7 +70,7 @@ export default App;
           </div>
         </section>
 
-        {/* Seção Comissões }
+        {/* Seção Comissões */}
         <section id="comissoes" className="section section-comissoes">
           <div className="container">
             <h2>Comissões</h2>
@@ -102,7 +86,7 @@ export default App;
                 <h3>Comissão de Educação</h3>
                 <p>
                   Responsável pelos materiais educativos do EGRIC, como as{' '}
-                  <a href="#cartilhas" className="link-destaque">Cartilhas</a>, promovendo a disseminação de conhecimento sobre espeleologia e conservação.
+                  <a href="/cartilhas" className="link-destaque">Cartilhas</a>, promovendo a disseminação de conhecimento sobre espeleologia e conservação.
                 </p>
               </article>
 
@@ -125,6 +109,3 @@ export default App;
     </div>
   );
 }
-
-export default App;
-*/}
