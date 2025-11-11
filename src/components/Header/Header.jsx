@@ -29,7 +29,6 @@ const Header = () => {
       <div className="header-container">
         <div className="logo">
           <img src={logoBranco} alt="EGRIC Logo" />
-          {/*<span className="logo-text">EGRIC</span>*/}
         </div>
 
         <nav className={`nav-menu ${mobileMenuOpen ? 'mobile-active' : ''}`}>
@@ -55,16 +54,10 @@ const Header = () => {
                 CURSOS <span className="arrow">▼</span>
               </button>
               <ul className="dropdown-menu">
-                <li><a href="#curso-basico" onClick={closeMobileMenu}>CURSO DE INTRODUÇÃO À ESPELEOLOGIA</a></li>
-                <li><a href="#curso-avancado" onClick={closeMobileMenu}>CURSO DE TOPOGRAFIA DE CAVERNAS</a></li>
-                {/*<li><a href="#curso-vertical">Técnicas Verticais</a></li>
-                <li><a href="#curso-resgate">Resgate em Cavernas</a></li>*/}
+                <li><a href="#curso-introducao" onClick={closeMobileMenu}>CURSO DE INTRODUÇÃO À ESPELEOLOGIA</a></li>
+                <li><a href="#curso-topografia" onClick={closeMobileMenu}>CURSO DE TOPOGRAFIA DE CAVERNAS</a></li>
               </ul>
             </li>
-            
-            {/*<li className="nav-item">
-              <a href="#calendario" onClick={closeMobileMenu}>CALENDÁRIO</a>
-            </li>*/}
             
             <li 
               className={`nav-item dropdown ${activeDropdown === 'cartilhas' ? 'active' : ''}`}
@@ -78,10 +71,9 @@ const Header = () => {
                 CARTILHAS <span className="arrow">▼</span>
               </button>
               <ul className="dropdown-menu">
-                <li><a href="#cartilha-seguranca" onClick={closeMobileMenu}>Segurança</a></li>
-                <li><a href="#cartilha-equipamentos" onClick={closeMobileMenu}>Equipamentos</a></li>
-                <li><a href="#cartilha-conservacao" onClick={closeMobileMenu}>Conservação</a></li>
-                <li><a href="#cartilha-iniciantes" onClick={closeMobileMenu}>Para Iniciantes</a></li>
+                <li><a href="#cartilha-oqcaverna" onClick={closeMobileMenu}>O que é caverna?</a></li>
+                <li><a href="#cartilha-oqespeleologia" onClick={closeMobileMenu}>O que é espeleologia?</a></li>
+                <li><a href="#cartilha-oqespeleogenese" onClick={closeMobileMenu}>O que é espeleogênese?</a></li>
               </ul>
             </li>
             
