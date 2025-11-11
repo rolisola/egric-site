@@ -1,11 +1,41 @@
+/* Headroom wrapper */
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+
+.headroom--scrolled {
+  transition: transform 0.3s ease-in-out;
+}
+
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
 /* Header Container */
 .header {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Header shrinks when scrolled */
+.headroom--scrolled .header {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .header-container {
@@ -15,6 +45,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  transition: padding 0.3s ease;
+}
+
+.headroom--scrolled .header-container {
+  padding: 0.5rem 2rem;
 }
 
 /* Logo */
@@ -28,7 +63,11 @@
 .logo img {
   height: 90px;
   width: auto;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.headroom--scrolled .logo img {
+  height: 60px;
 }
 
 .logo img:hover {
@@ -78,6 +117,12 @@
   border: none;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.headroom--scrolled .nav-item a,
+.headroom--scrolled .nav-item .dropdown-toggle {
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
 }
 
 .nav-item a:hover,
