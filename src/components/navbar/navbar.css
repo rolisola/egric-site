@@ -127,6 +127,34 @@
   transform: translateX(-50%) translateY(0);
 }
 
+/* Área invisível para detectar hover */
+.navbar-hover-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 999;
+  background: transparent;
+}
+
+/* Navbar reduzida */
+.navbar.shrunk .navbar-container {
+  height: 60px;
+}
+
+.navbar.shrunk .navbar-logo img {
+  height: 50px;
+}
+
+/* Transição suave */
+.navbar,
+.navbar-container,
+.navbar-logo img {
+  transition: all 0.3s ease-in-out;
+}
+
+
 /* Ajuste de dropdown para evitar overflow em telas médias - apenas o último item */
 @media screen and (max-width: 1453px) {
   .navbar-item:last-child .dropdown-menu {
@@ -288,4 +316,44 @@
 
 .navbar {
   animation: fadeInDown 0.5s ease;
+}
+
+/* --- Hover area --- */
+/* Hover area fica depois do <nav> no DOM; por padrão não captura ponteiros.
+   Quando a navbar estiver oculta (classe .hidden), ativamos pointer-events
+   nessa área para que o hover reexiba a navbar. */
+.navbar-hover-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;        /* sensível ao movimento do mouse */
+  z-index: 998;        /* por baixo da navbar por padrão */
+  pointer-events: none; /* não captura mouse a menos que ativado */
+  background: transparent;
+  transition: height 0.2s ease;
+}
+
+/* Quando navbar está oculta, permitimos que a hover area receba pointer events
+   e colocamos a hover area acima para capturar o mouse no topo */
+.navbar.hidden + .navbar-hover-area {
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+/* Reduz tamanho quando shrunk */
+.navbar.shrunk .navbar-container {
+  height: 60px;
+}
+
+.navbar.shrunk .navbar-logo img {
+  height: 50px;
+}
+
+/* Garantir transições suaves */
+.navbar,
+.navbar-container,
+.navbar-logo img,
+.navbar-menu {
+  transition: all 0.25s ease-in-out;
 }
