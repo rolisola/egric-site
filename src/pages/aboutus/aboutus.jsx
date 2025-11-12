@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/header/header';
+import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 
 export default function AboutUs() {
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       
       <main className="main-content">
         <section id="sobre" className="section section-about">

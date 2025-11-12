@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/header/header';
+import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 
 export default function Home() {
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       
       {/* Main Content */}
       <main className="main-content">

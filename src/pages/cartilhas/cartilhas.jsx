@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import Header from '../../components/header/header';
+import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 import './cartilhas.css';
 
@@ -71,7 +71,7 @@ const Cartilhas = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       <section id="cartilhas" className="cartilhas-section">
         <div className="container">
         <div className="cartilhas-header">
