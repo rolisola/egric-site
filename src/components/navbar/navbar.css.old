@@ -1,5 +1,5 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -107,13 +107,13 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background-color: #16213e;
+  background: #16213e;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0.5rem 0 0 0;
-  min-width: max-content;
+  min-width: 250px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
@@ -157,8 +157,30 @@
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1001;
-}/* Responsive Styles */
-/*@media screen and (max-width: 1200px) {
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
   .navbar-container {
     padding: 0 1rem;
   }
@@ -172,7 +194,7 @@
     padding: 0.7rem 0.9rem;
     font-size: 0.9rem;
   }
-}*/
+}
 
 @media screen and (max-width: 992px) {
   .hamburger {

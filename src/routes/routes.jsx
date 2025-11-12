@@ -4,10 +4,12 @@ import Cartilhas from "../pages/cartilhas/cartilhas";
 import Cursos from "../pages/cursos/cursos";
 import Comissoes from "../pages/comissoes/comissoes";
 import AboutUs from "../pages/aboutus/aboutus";
+import ScrollToTop from "../components/scrolltotop";
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cartilhas" element={<Cartilhas />} />

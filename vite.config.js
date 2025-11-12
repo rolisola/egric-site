@@ -8,5 +8,8 @@ export default defineConfig({
     host: '0.0.0.0',  // permite acesso pela rede (não só localhost)
     port: 5173,       // porta padrão
     strictPort: true, // evita mudar de porta automaticamente
+    allowedHosts: [
+      'unbonneted-overcritically-darcie.ngrok-free.dev'
+    ],
   },
 })

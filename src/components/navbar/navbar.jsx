@@ -59,6 +59,12 @@ const Navbar = () => {
     }
   };
 
+  // Scroll to top when navigating to a new page
+  const handlePageNavigation = () => {
+    window.scrollTo(0, 0);
+    closeMenu();
+  };
+
   return (
     <nav className={`navbar ${isVisible ? 'visible' : 'hidden'}`}>
       <div className="navbar-container">
@@ -73,9 +79,9 @@ const Navbar = () => {
           onClick={toggleMenu}
           aria-label="Menu"
         >
+          {/*<span></span>
           <span></span>
-          <span></span>
-          <span></span>
+          <span></span>*/}
         </button>
 
         <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -84,9 +90,9 @@ const Navbar = () => {
               INÍCIO
             </Link>
           </li>
-          
+
           <li className="navbar-item">
-            <Link to="/#egric" onClick={(e) => handleAnchorClick(e, '#egric')}>
+            <Link to="/aboutus" onClick={closeMenu}>
               EGRIC
             </Link>
           </li>
@@ -125,23 +131,23 @@ const Navbar = () => {
             onMouseEnter={() => toggleDropdown(2)}
             onMouseLeave={closeDropdown}
           >
-            <Link to="/cartilhas" className="dropdown-toggle">
+            <Link to="/cartilhas" className="dropdown-toggle" onClick={handlePageNavigation}>
               CARTILHAS
               <span className="arrow">▼</span>
             </Link>
             <ul className="dropdown-menu">
               <li>
-                <Link to="/cartilhas#cartilha-oqcaverna" onClick={closeMenu}>
+                <Link to="/cartilhas#cartilha-oqcaverna" onClick={handlePageNavigation}>
                   O que é caverna?
                 </Link>
               </li>
               <li>
-                <Link to="/cartilhas#cartilha-oqespeleologia" onClick={closeMenu}>
+                <Link to="/cartilhas#cartilha-oqespeleologia" onClick={handlePageNavigation}>
                   O que é espeleologia?
                 </Link>
               </li>
               <li>
-                <Link to="/cartilhas#cartilha-oqespeleogenese" onClick={closeMenu}>
+                <Link to="/cartilhas#cartilha-oqespeleogenese" onClick={handlePageNavigation}>
                   O que é espeleogênese?
                 </Link>
               </li>
@@ -185,12 +191,6 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-          </li>
-
-          <li className="navbar-item">
-            <Link to="/aboutus" onClick={closeMenu}>
-              SOBRE
-            </Link>
           </li>
         </ul>
       </div>
