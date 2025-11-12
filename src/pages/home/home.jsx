@@ -9,8 +9,8 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="main-content">
+        
         {/* Seção Início */}
-        aaaaaaaaaaaaaaa
         <section id="inicio" className="section section-home">
           <div className="container">
             <h1>Bem-vindo ao EGRIC</h1>
