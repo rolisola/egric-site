@@ -38,6 +38,10 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
+  const openDropdownMenu = (index) => {
+    setOpenDropdown(index);
+  };
+
   const closeDropdown = () => {
     setOpenDropdown(null);
   };
@@ -105,10 +109,17 @@ const Navbar = () => {
           
           <li 
             className={`navbar-item dropdown ${openDropdown === 1 ? 'active' : ''}`}
-            onMouseEnter={() => toggleDropdown(1)}
+            onMouseEnter={() => openDropdownMenu(1)}
             onMouseLeave={closeDropdown}
           >
-            <a href="#cursos" className="dropdown-toggle">
+            <a 
+              href="#cursos" 
+              className="dropdown-toggle"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleDropdown(1);
+              }}
+            >
               CURSOS
               <span className="arrow">▼</span>
             </a>
@@ -128,13 +139,19 @@ const Navbar = () => {
           
           <li 
             className={`navbar-item dropdown ${openDropdown === 2 ? 'active' : ''}`}
-            onMouseEnter={() => toggleDropdown(2)}
+            onMouseEnter={() => openDropdownMenu(2)}
             onMouseLeave={closeDropdown}
           >
-            <Link to="/cartilhas" className="dropdown-toggle" onClick={handlePageNavigation}>
+            <button 
+              className="dropdown-toggle"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleDropdown(2);
+              }}
+            >
               CARTILHAS
               <span className="arrow">▼</span>
-            </Link>
+            </button>
             <ul className="dropdown-menu">
               <li>
                 <Link to="/cartilhas#cartilha-oqcaverna" onClick={handlePageNavigation}>
@@ -162,10 +179,17 @@ const Navbar = () => {
           
           <li 
             className={`navbar-item dropdown ${openDropdown === 3 ? 'active' : ''}`}
-            onMouseEnter={() => toggleDropdown(3)}
+            onMouseEnter={() => openDropdownMenu(3)}
             onMouseLeave={closeDropdown}
           >
-            <a href="#comissoes" className="dropdown-toggle">
+            <a 
+              href="#comissoes" 
+              className="dropdown-toggle"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleDropdown(3);
+              }}
+            >
               COMISSÕES
               <span className="arrow">▼</span>
             </a>
