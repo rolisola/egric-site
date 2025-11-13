@@ -1,12 +1,9 @@
 import React from 'react';
-import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 
 export default function Comissoes() {
   return (
-    <div className="App">
-      <Navbar />
-      
+    <div className="App">      
       <main className="main-content">
         {/* Seção Comissões */}
         <section id="comissoes" className="section section-comissoes">

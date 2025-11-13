@@ -1,11 +1,20 @@
 import React from 'react';
-import Routes from "./routes/routes.jsx"
+import { BrowserRouter } from 'react-router-dom';
+import Header from './components/header/header.jsx';
+import Routes from './routes/routes.jsx';
 import './App.css';
 
 function App() {
-  return <Routes />;
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes />
+    </BrowserRouter>
+  );
 }
+
 export default App;
+
 
 {/*function App() {
   return (

@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 
 const Espeleologia = () => {
   return (
     <>
-      <Navbar />
       <main>
         <section id="espeleologia" className="section">
           <div className="container">
