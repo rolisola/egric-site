@@ -7,16 +7,18 @@ import Cursos from "../pages/cursos/cursos";
 import Comissoes from "../pages/comissoes/comissoes";
 import Galeria from "../pages/galeria/galeria";
 
-export default function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/aboutus" element={<AboutUs />} />
-      <Route path="/espeleologia" element={<Espeleologia />} />
-      <Route path="/cartilhas" element={<Cartilhas />} />
-      <Route path="/cursos" element={<Cursos />} />
-      <Route path="/comissoes" element={<Comissoes />} />
-      <Route path="/galeria" element={<Galeria />} />
-    </Routes>
-  );
+const AppRoutes = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/espeleologia" element={<Espeleologia />} />
+            <Route path="/cartilhas" element={<Cartilhas />} />
+            <Route path="/cursos" element={<Cursos />} />
+            <Route path="/comissoes" element={<Comissoes />} />
+            <Route path="/galeria" element={<Galeria />} />
+        </Routes>
+    );
 }
+
+export default AppRoutes;
