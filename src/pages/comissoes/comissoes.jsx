@@ -7,12 +7,12 @@ const Comissoes = () => {
 				{/* Seção Comissões */}
 				<section id="comissoes" className="section section-comissoes">
 					<div className="container">
-						<h2>Comissões</h2>
+						<h1>Comissões</h1>
 						<p className="subtitle">Conheça as comissões e grupos de trabalho do EGRIC.</p>
 
 						<div className="comissoes-grid">
 							<article id="comissao-cursos" className="comissao-card">
-								<h3>Comissão de Cursos</h3>
+								<h2>Comissão de Cursos</h2>
 								<p>
 									Organiza e executa cursos e treinamentos técnicos do grupo, capacitando
 									novos membros e aprimorando conhecimentos dos espeleólogos.
@@ -24,7 +24,7 @@ const Comissoes = () => {
 							</article>
 
 							<article id="comissao-educacao" className="comissao-card">
-								<h3>Comissão de Educação</h3>
+								<h2>Comissão de Educação</h2>
 								<p>
 									Responsável pelos materiais educativos do EGRIC, como as{' '}
 									<a href="/cartilhas" className="link-destaque">Cartilhas</a>, promovendo
@@ -37,7 +37,7 @@ const Comissoes = () => {
 							</article>
 
 							<article id="comissao-marketing" className="comissao-card">
-								<h3>Comissão de Marketing</h3>
+								<h2>Comissão de Marketing</h2>
 								<p>
 									Cuida da comunicação, identidade visual e divulgação das atividades do
 									EGRIC nas redes sociais e demais canais.
@@ -49,7 +49,7 @@ const Comissoes = () => {
 							</article>
 
 							<article id="comissao-tecnica" className="comissao-card">
-								<h3>Comissão Técnica Científica</h3>
+								<h2>Comissão Técnica Científica</h2>
 								<p>
 									Desenvolve pesquisas, documentação e padronização técnico-científica das
 									atividades espeleológicas do grupo.
@@ -62,7 +62,7 @@ const Comissoes = () => {
 						</div>
 
 						<div className="comissoes-info">
-							<h3>Faça Parte</h3>
+							<h2>Faça Parte</h2>
 							<p>
 								Interessado em participar de alguma comissão? Entre em contato conosco
 								através de nossas redes sociais. Buscamos pessoas comprometidas e apaixonadas

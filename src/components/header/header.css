@@ -11,6 +11,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 .logo a {
@@ -18,6 +19,7 @@
 	align-items: center;
 	text-decoration: none;
 	transition: transform 0.2s ease;
+	z-index: 1001;
 }
 
 .logo a:hover {
@@ -29,7 +31,8 @@
 	width: auto;
 }
 
-.nav {
+/* Navbar desktop */
+.navbar {
 	display: flex;
 	gap: 2rem;
 	align-items: center;
@@ -53,6 +56,41 @@
 
 .nav-link:active {
 	transform: scale(0.98);
+}
+
+/* Botão hambúrguer - escondido no desktop */
+.mobile-menu-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 25px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+	transform-origin: center;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+	transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Classes do Headroom para animação */
@@ -83,22 +121,129 @@
 }
 
 /* Media queries para responsividade */
-@media (max-width: 768px) {
+
+/* Tablets em modo paisagem e telas médias */
+@media (max-width: 1024px) {
+	.header-container {
+		padding: 0.875rem 1.5rem;
+	}
+
+	.navbar {
+		gap: 1.5rem;
+	}
+
+	.nav-link {
+		font-size: 0.95rem;
+		padding: 0.5rem 0.875rem;
+	}
+}
+
+/* Tablets em modo retrato */
+@media (max-width: 968px) {
 	.header-container {
 		padding: 0.75rem 1rem;
 	}
 
-	.nav {
-		gap: 1rem;
+	.logo img {
+		height: 40px;
+	}
+
+	/* Mostrar botão hambúrguer em tablets e mobile */
+	.mobile-menu-toggle {
+		display: flex;
+	}
+
+	/* Menu mobile/tablet */
+	.navbar {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100vh;
+		width: 65%;
+		max-width: 350px;
+		background-color: #1a1a1a;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		transition: right 0.3s ease-in-out;
+		box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+		z-index: 1000;
+	}
+
+	.navbar.mobile-open {
+		right: 0;
 	}
 
 	.nav-link {
-		font-size: 0.9rem;
-		padding: 0.4rem 0.8rem;
+		font-size: 1.2rem;
+		padding: 0.875rem 1.75rem;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/* Smartphones em modo paisagem */
+@media (max-width: 768px) {
+	.navbar {
+		width: 70%;
+		max-width: 300px;
+		gap: 1.5rem;
 	}
 
-	.logo svg {
-		width: 32px;
+	.nav-link {
+		font-size: 1.1rem;
+		padding: 0.75rem 1.5rem;
+	}
+}
+
+/* Smartphones em modo retrato */
+@media (max-width: 480px) {
+	.header-container {
+		padding: 0.5rem 0.75rem;
+	}
+
+	.logo img {
+		height: 35px;
+	}
+
+	.navbar {
+		width: 80%;
+		gap: 1.25rem;
+	}
+
+	.nav-link {
+		font-size: 1rem;
+		padding: 0.625rem 1.25rem;
+	}
+}
+
+/* Smartphones pequenos */
+@media (max-width: 360px) {
+	.header-container {
+		padding: 0.5rem;
+	}
+
+	.logo img {
 		height: 32px;
+	}
+
+	.navbar {
+		width: 85%;
+	}
+
+	.nav-link {
+		font-size: 0.95rem;
+		padding: 0.5rem 1rem;
+	}
+
+	.mobile-menu-toggle {
+		width: 26px;
+		height: 22px;
+	}
+
+	.mobile-menu-toggle span {
+		width: 26px;
+		height: 2.5px;
 	}
 }
