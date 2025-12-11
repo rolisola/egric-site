@@ -11,7 +11,7 @@ const AboutUs = () => {
 						<div>
 							<h2>Nossa História</h2>
 							<p>
-								O EGRIC (Espeleogrupo Rio Claro) foi fundado em Rio Claro - SP com o objetivo
+								O EGRIC (Espeleo Grupo Rio Claro) foi fundado em Rio Claro - SP com o objetivo
 								de promover a exploração, pesquisa, documentação e conservação de cavernas
 								e do patrimônio espeleológico brasileiro.
 							</p>

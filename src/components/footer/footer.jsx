@@ -26,7 +26,7 @@ const Footer = () => {
 					<div className="footer-section footer-about">
 						<h3>EGRIC</h3>
 						<p className="footer-description">
-							Espeleogrupo Rio Claro - Dedicado à exploração, pesquisa e conservação
+							Espeleo Grupo Rio Claro - Dedicado à exploração, pesquisa e conservação
 							do patrimônio espeleológico brasileiro desde sua fundação.
 						</p>
 						<div className="footer-logo">
@@ -117,7 +117,7 @@ const Footer = () => {
 				<div className="footer-container">
 					<div className="footer-bottom-content">
 						<p className="copyright">
-							&copy; {currentYear} EGRIC - Espeleogrupo Rio Claro. Todos os direitos reservados.
+							&copy; {currentYear} EGRIC - Espeleo Grupo Rio Claro. Todos os direitos reservados.
 						</p>
 						<div className="footer-legal">
 							<a href="#privacidade">Política de Privacidade</a>

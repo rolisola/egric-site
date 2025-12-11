@@ -1,6 +1,6 @@
 {
   "short_name": "EGRIC",
-  "name": "Espeleogrupo Rio Claro",
+  "name": "Espeleo Grupo Rio Claro",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -24,7 +24,7 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
-  "description": "Site oficial do Espeleogrupo Rio Claro",
+  "description": "Site oficial do Espeleo Grupo Rio Claro",
   "lang": "pt-BR",
   "scope": "/",
   "orientation": "portrait-primary"

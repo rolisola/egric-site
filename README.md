@@ -1,10 +1,10 @@
 # EGRIC Site
 
-Site institucional para o EGRIC (Espeleogrupo Rio Claro) desenvolvido em React + Vite.
+Site institucional para o EGRIC (Espeleo Grupo Rio Claro) desenvolvido em React + Vite.
 
 ## 🦇 Sobre o Projeto
 
-Site oficial do Espeleogrupo Rio Claro, uma organização dedicada à exploração, pesquisa e conservação do patrimônio espeleológico brasileiro.
+Site oficial do Espeleo Grupo Rio Claro, uma organização dedicada à exploração, pesquisa e conservação do patrimônio espeleológico brasileiro.
 
 ## ⚡ Tecnologias
 
@@ -129,7 +129,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 
 ## 📄 Licença
 
-Este projeto pertence ao EGRIC - Espeleogrupo Rio Claro.
+Este projeto pertence ao EGRIC - Espeleo Grupo Rio Claro.
 
 ---
 

@@ -21,7 +21,7 @@ const Home = () => {
 					<div className="container">
 						<h2>Sobre o EGRIC</h2>
 						<p>
-							O EGRIC (Espeleogrupo Rio Claro) é uma organização dedicada à exploração,
+							O EGRIC (Espeleo Grupo Rio Claro) é uma organização dedicada à exploração,
 							pesquisa, documentação e conservação de cavernas e do patrimônio espeleológico.
 						</p>
 						<p>
