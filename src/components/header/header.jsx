@@ -20,6 +20,7 @@ const Header = () => {
 		<Headroom
 			disableInlineStyles
 			pinStart={100}
+			disable={mobileMenuOpen}
 			style={{
 				position: 'fixed',
 				top: 0,
