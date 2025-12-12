@@ -39,7 +39,7 @@
 /* Seção Cartilhas */
 .cartilhas-section {
 	min-height: 100vh;
-	padding: 100px 0 80px;
+	padding: 0 0 80px;
 	background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
 	position: relative;
 }
@@ -71,13 +71,14 @@
 	margin-bottom: 60px;
 }
 
-.cartilhas-header h2 {
+.cartilhas-header h1 {
 	font-size: 3rem;
 	font-weight: 700;
 	background: linear-gradient(135deg, #fdc830 0%, #ff6b35 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	margin-top: 0;
 	margin-bottom: 16px;
 	animation: fadeInDown 0.8s ease;
 }
@@ -230,7 +231,7 @@
 	text-align: left;
 }
 
-.card-content h3 {
+.card-content h2 {
 	color: #fdc830;
 	font-size: 1.8rem;
 	font-weight: 700;
@@ -354,7 +355,7 @@
 	border-bottom: 2px solid rgba(253, 200, 48, 0.2);
 }
 
-.pdf-viewer-header h3 {
+.pdf-viewer-header h2 {
 	color: #fdc830;
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -551,7 +552,7 @@
 		padding: 80px 0 60px;
 	}
 
-	.cartilhas-header h2 {
+	.cartilhas-header h1 {
 		font-size: 2rem;
 	}
 
@@ -583,7 +584,7 @@
 		text-align: center;
 	}
 
-	.card-content h3 {
+	.card-content h2 {
 		font-size: 1.4rem;
 	}
 
@@ -600,6 +601,7 @@
 	.btn {
 		width: 100%;
 		justify-content: center;
+		box-sizing: border-box;
 	}
 
 	.pdf-viewer-modal {
@@ -614,7 +616,7 @@
 		padding: 15px 20px;
 	}
 
-	.pdf-viewer-header h3 {
+	.pdf-viewer-header h2 {
 		font-size: 1.1rem;
 	}
 
@@ -659,7 +661,7 @@
 		height: 100%;
 	}
 
-	.card-content h3 {
+	.card-content h2 {
 		font-size: 1.25rem;
 	}
 
