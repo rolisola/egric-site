@@ -14,15 +14,15 @@ const Cartilhas = () => {
     const cartilhas = [
         {
             id: 'oqcaverna',
-            titulo: 'O que é caverna?',
-            descricao: 'Descubra como cavernas se formam, respiram e abrigam ecossistemas inteiros; esta cartilha apresenta histórias reais das cavernas do Brasil e mostra por que cada passo precisa ser feito com respeito e encantamento.',
+            titulo: 'O que é Caverna?',
+            descricao: 'Será que cavernas realmente são assustadoras? Descubra cientificamente o que são as cavernas, o que as forma e seus ecossistemas.',
             pdf: '/public/cartilhas/Cartilha1_O_que_e_caverna.pdf',
             disponivel: true
         },
         {
             id: 'oqespeleologia',
-            titulo: 'O que é espeleologia?',
-            descricao: 'Conheça a ciência que transforma curiosidade em expedições seguras: da preparação das equipes às técnicas de mapeamento, esta leitura revela como a espeleologia une aventura, pesquisa e proteção ambiental.',
+            titulo: 'O que é Espeleologia?',
+            descricao: 'Conheça a ciência que transforma curiosidade em expedições seguras: da pré-história aos tempos atuais. Esta leitura revela como a espeleologia une aventura, pesquisa e proteção ambiental.',
             pdf: '/public/cartilhas/Cartilha2_O_que_e_espeleologia.pdf',
             disponivel: true
         },
@@ -30,7 +30,7 @@ const Cartilhas = () => {
             id: 'oqespeleogenese',
             titulo: 'O que é espeleogênese?',
             descricao: 'Entenda, passo a passo, como água, rocha e tempo esculpem salões gigantescos; você vai visualizar cada fase da espeleogênese e aprender a reconhecer as pistas de uma caverna ainda em formação.',
-            pdf: '/public/cartilhas/Cartilha3_O_que_e_espelogenese.pdf',
+            pdf: '/public/cartilhas/Cartilha3_O_que_e_espeleogenese.pdf',
             disponivel: true
         }
     ];
