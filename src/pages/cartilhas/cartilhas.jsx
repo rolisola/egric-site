@@ -72,7 +72,7 @@ const Cartilhas = () => {
             <section id="cartilhas" className="cartilhas-section">
                 <div className="container">
                     <div className="cartilhas-header">
-                        <h2>Cartilhas Educativas</h2>
+                        <h1>Cartilhas Educativas</h1>
                         <p className="subtitle">
                             Materiais produzidos pela <a href="#comissao-educacao" className="link-educacao">Comissão de Educação</a> do EGRIC,
                             com foco em segurança, equipamentos, conservação e orientação a iniciantes.
@@ -117,7 +117,7 @@ const Cartilhas = () => {
                                 </div>
 
                                 <div className="card-content">
-                                    <h3>{cartilha.titulo}</h3>
+                                    <h2>{cartilha.titulo}</h2>
                                     <p>{cartilha.descricao}</p>
 
                                     <div className="card-actions">
@@ -153,7 +153,7 @@ const Cartilhas = () => {
                         <div className="pdf-viewer-modal" onClick={closeViewer}>
                             <div className="pdf-viewer-container" onClick={(e) => e.stopPropagation()}>
                                 <div className="pdf-viewer-header">
-                                    <h3>{selectedCartilha.titulo}</h3>
+                                    <h2>{selectedCartilha.titulo}</h2>
                                     <button className="close-btn" onClick={closeViewer}>
                                         ✕
                                     </button>

@@ -24,11 +24,19 @@ Este projeto utiliza:
 
 ### Instalação
 
-Clone o repositório e instale as dependências:
-
+Clone o repositório:
 ```bash
 git clone https://github.com/rolisola/egric-site.git
 cd egric-site
+```
+
+Instale o Yarn 4+:
+```bash
+corepack enable
+corepack prepare yarn@stable --activate
+```
+Instale as dependências:
+```bash
 yarn install
 ```
 
