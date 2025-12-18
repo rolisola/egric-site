@@ -1,0 +1,14 @@
+.aboutus-section .content {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.aboutus-section .content h2 {
+	margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+	.aboutus-section .content h2 {
+		margin-top: 24px;
+	}
+}

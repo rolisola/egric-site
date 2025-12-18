@@ -1,0 +1,64 @@
+/* Navbar Component Styles - Desktop Only */
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  display: inline-block;
+}
+
+.navbar-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-item a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4a90e2, #67b8ff);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar-item a:hover {
+  color: #67b8ff;
+}
+
+.navbar-item a:hover::before {
+  width: 80%;
+}
+
+.navbar-item a:active {
+  color: #4a90e2;
+}
+
+/* Active link style (você pode adicionar uma classe 'active' via JS) */
+.navbar-item a.active {
+  color: #67b8ff;
+}
+
+.navbar-item a.active::before {
+  width: 80%;
+}
