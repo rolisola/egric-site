@@ -11,6 +11,10 @@ const Cartilhas = () => {
     const [pageNumber, setPageNumber] = useState(1);
     const [scale, setScale] = useState(1.0);
 
+	const showUnavailableAlert = () => {
+		window.alert('Não é possível ler online ou baixar o PDF no momento.');
+	};
+
     const cartilhas = [
         {
             id: 'oqcaverna',
@@ -125,7 +129,8 @@ const Cartilhas = () => {
                                             <>
                                                 <button
                                                     className="btn btn-primary"
-                                                    onClick={() => setSelectedCartilha(cartilha)}
+												type="button"
+												onClick={showUnavailableAlert}
                                                 >
                                                     <span className="icon">📖</span> Ler Online
                                                 </button>
@@ -133,6 +138,10 @@ const Cartilhas = () => {
                                                     className="btn btn-secondary"
                                                     href={cartilha.pdf}
                                                     download
+												onClick={(e) => {
+													e.preventDefault();
+													showUnavailableAlert();
+												}}
                                                 >
                                                     <span className="icon">📥</span> Baixar PDF
                                                 </a>
@@ -192,6 +201,10 @@ const Cartilhas = () => {
                                             href={selectedCartilha.pdf}
                                             download
                                             className="control-btn download-btn"
+											onClick={(e) => {
+												e.preventDefault();
+												showUnavailableAlert();
+											}}
                                         >
                                             📥 Baixar
                                         </a>
