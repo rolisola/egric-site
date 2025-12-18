@@ -1,18 +1,19 @@
 import React from 'react';
+import './cursos.css';
 
 const Cursos = () => {
     return (
         <div className="App">
             <main className="main-content">
                 {/* Seção Cursos */}
-                <section id="cursos" className="section section-courses">
+                <section id="cursos" className="page-shell cursos-section">
                     <div className="container">
-
-                        <h1>Cursos</h1>
-
-                        <p className="subtitle">
-                            Capacitação e formação em espeleologia para todos os níveis
-                        </p>
+                        <div className="page-header">
+                            <h1>Cursos</h1>
+                            <p className="subtitle">
+                                Capacitação e formação em espeleologia para todos os níveis
+                            </p>
+                        </div>
 
                         <div className="courses-grid">
                             <div className="course-card" id="curso-introducao">
@@ -43,7 +44,7 @@ const Cursos = () => {
                         <div className="course-info">
                             <h2>Informações Gerais</h2>
                             <p>
-                                Os cursos do EGRIC são ministrados por instrutores experientes e certificados,
+                                Os cursos do EGRIC são ministrados por instrutores experientes,
                                 com atividades teóricas e práticas em cavernas da região.
                             </p>
                             <p>

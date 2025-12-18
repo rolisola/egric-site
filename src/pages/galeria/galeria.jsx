@@ -1,18 +1,12 @@
-import React from 'react';
+import UnderConstruction from '../../components/underconstruction/underconstruction';
 
 const Galeria = () => {
-    return (
-        <>
-            <main>
-                <section id="galeria" className="section section-gallery">
-                    <div className="container">
-                        <h1>Galeria</h1>
-                        <p>Explore nossas expedições através de imagens.</p>
-                    </div>
-                </section>
-            </main>
-        </>
-    );
+	return (
+		<UnderConstruction
+			title="Galeria"
+			description="Estamos organizando as fotos das expedições para publicar aqui."
+		/>
+	);
 };
 
 export default Galeria;

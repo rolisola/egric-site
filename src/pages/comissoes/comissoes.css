@@ -1,0 +1,55 @@
+.comissoes-section .comissoes-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+	margin-top: 40px;
+}
+
+.comissoes-section .comissao-card {
+	background: rgba(255, 255, 255, 0.05);
+	border: 2px solid rgba(253, 200, 48, 0.2);
+	border-radius: 20px;
+	padding: 24px;
+	backdrop-filter: blur(10px);
+	transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.comissoes-section .comissao-card:hover {
+	transform: translateY(-4px);
+	border-color: #fdc830;
+	box-shadow: 0 16px 32px rgba(253, 200, 48, 0.18);
+}
+
+.comissoes-section .comissao-card h2 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	color: #fdc830;
+	font-size: 1.6rem;
+}
+
+.comissoes-section .comissoes-info {
+	margin-top: 40px;
+	background: rgba(255, 255, 255, 0.04);
+	border: 2px solid rgba(253, 200, 48, 0.15);
+	border-radius: 20px;
+	padding: 24px;
+	backdrop-filter: blur(10px);
+}
+
+@media (max-width: 968px) {
+	.comissoes-section .comissoes-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	.comissoes-section .comissao-card,
+	.comissoes-section .comissoes-info {
+		padding: 16px;
+		border-radius: 16px;
+	}
+
+	.comissoes-section .comissao-card h2 {
+		font-size: 1.25rem;
+	}
+}

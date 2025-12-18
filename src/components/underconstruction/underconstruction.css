@@ -1,0 +1,16 @@
+.underconstruction {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.underconstruction__content {
+	text-align: center;
+	border: 1px dashed rgba(100, 108, 255, 0.45);
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.underconstruction__content h1 {
+	margin-top: 0;
+}

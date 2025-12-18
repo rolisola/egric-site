@@ -1,26 +1,24 @@
 import React from 'react';
+import './aboutus.css';
 
 const AboutUs = () => {
 	return (
 		<div className="App">
 			<main className="main-content">
-				<section id="sobre" className="section section-about">
+				<section id="sobre" className="page-shell aboutus-section">
 					<div className="container">
-						<h1>Sobre o EGRIC</h1>
-						<p className="subtitle">Espeleogrupo Rio Claro</p>
-						<div>
+						<div className="page-header">
+							<h1>Sobre o EGRIC</h1>
+						</div>
+						<div className="content">
 							<h2>Nossa História</h2>
 							<p>
-								O EGRIC (Espeleo Grupo Rio Claro) foi fundado em Rio Claro - SP com o objetivo
-								de promover a exploração, pesquisa, documentação e conservação de cavernas
-								e do patrimônio espeleológico brasileiro.
+								O Espeleo Grupo Rio Claro (EGRIC) é uma sociedade civil sem fins lucrativos, fundada no dia 05 de maio de 1979. Tem por fins o reconhecimento, a pesquisa e a exploração científica das cavidades naturais, bem como a preservação da natureza e do meio ambiente.
 							</p>
 
-							<h2>Missão</h2>
+							{/*<h2>Missão</h2>
 							<p>
-								Nossa missão é desenvolver atividades de exploração e pesquisa em cavernas,
-								promover a educação ambiental e a preservação do patrimônio espeleológico,
-								além de capacitar novos espeleólogos através de cursos e treinamentos.
+								Nossa missão é desenvolver atividades de exploração e pesquisa em cavernas, promover a educação ambiental e a preservação do patrimônio espeleológico, além de capacitar novos espeleólogos através de cursos e treinamentos.
 							</p>
 
 							<h2>Valores</h2>
@@ -30,7 +28,7 @@ const AboutUs = () => {
 								<li>Educação e compartilhamento de conhecimento</li>
 								<li>Trabalho em equipe e colaboração</li>
 								<li>Rigor científico nas pesquisas</li>
-							</ul>
+							</ul>*/}
 						</div>
 					</div>
 				</section>

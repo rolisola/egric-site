@@ -1,14 +1,17 @@
 import React from 'react';
+import './comissoes.css';
 
 const Comissoes = () => {
 	return (
 		<div className="App">
 			<main className="main-content">
 				{/* Seção Comissões */}
-				<section id="comissoes" className="section section-comissoes">
+				<section id="comissoes" className="page-shell comissoes-section">
 					<div className="container">
-						<h1>Comissões</h1>
-						<p className="subtitle">Conheça as comissões e grupos de trabalho do EGRIC.</p>
+						<div className="page-header">
+							<h1>Comissões</h1>
+							<p className="subtitle">Conheça as comissões e grupos de trabalho do EGRIC.</p>
+						</div>
 
 						<div className="comissoes-grid">
 							<article id="comissao-cursos" className="comissao-card">

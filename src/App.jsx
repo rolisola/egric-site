@@ -3,6 +3,7 @@ import Header from './components/header/header';
 import AppRoutes from './routes/routes';
 import Footer from './components/footer/footer';
 import './App.css';
+import './styles/styles.css';
 
 function App() {
 	return (
