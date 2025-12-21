@@ -183,7 +183,7 @@
 	color: #e0e0e0;
 	margin-bottom: 20px;
 	font-size: 0.95rem;
-	text-align: center;
+	text-align: justify;
 }
 
 .social-links {
@@ -380,45 +380,59 @@
    RESPONSIVE DESIGN
    ============================================ */
 
-/* Tablets */
-@media (max-width: 768px) {
-	.footer-main {
-		padding: 40px 20px 30px;
-	}
-
+/* Small desktops / large tablets */
+@media (max-width: 1020px) {
 	.footer-main .footer-container {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 30px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-areas:
+			"about contact"
+			"social social";
 	}
 
-	.footer-section h3 {
-		font-size: 1.2rem;
-	}
-
-	.footer-bottom-content {
-		flex-direction: column;
+	.footer-section h3{
 		text-align: center;
+	}
+
+	.footer-section h3::after {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.footer-section.footer-about {
+		grid-area: about;
+	}
+
+	.footer-section.footer-contact {
+		grid-area: contact;
+	}
+
+	.footer-section.footer-social {
+		grid-area: social;
+		justify-self: center;
 	}
 
 	.social-links {
 		justify-content: center;
 	}
-
-	.developer-content {
-		flex-direction: column;
-		text-align: center;
-	}
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+/* Tablets */
+@media (max-width: 768px) {
 	.footer-main {
 		padding: 30px 15px 20px;
 	}
 
 	.footer-main .footer-container {
 		grid-template-columns: 1fr;
+		grid-template-areas: none;
 		gap: 30px;
+	}
+
+	.footer-section.footer-about,
+	.footer-section.footer-contact,
+	.footer-section.footer-social {
+		grid-area: auto;
+		justify-self: stretch;
 	}
 
 	.footer-section {
@@ -431,11 +445,6 @@
 
 	.footer-section.footer-social p {
 		text-align: center;
-	}
-
-	.footer-section h3::after {
-		left: 50%;
-		transform: translateX(-50%);
 	}
 
 	.contact-list li {
@@ -454,10 +463,6 @@
 		display: none;
 	}
 
-	.social-links {
-		justify-content: center;
-	}
-
 	.footer-logo {
 		text-align: center;
 	}
@@ -471,7 +476,10 @@
 		text-align: center;
 		justify-content: center;
 	}
+}
 
+/* Mobile */
+@media (max-width: 480px) {
 	.developer-info {
 		flex-direction: column;
 		gap: 10px;
