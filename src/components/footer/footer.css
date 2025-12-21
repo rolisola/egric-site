@@ -77,6 +77,9 @@
 	color: #e0e0e0;
 	margin-bottom: 20px;
 	font-size: 0.95rem;
+	text-align: justify;
+	text-align-last: left;
+	hyphens: auto;
 }
 
 .footer-logo {
@@ -180,6 +183,7 @@
 	color: #e0e0e0;
 	margin-bottom: 20px;
 	font-size: 0.95rem;
+	text-align: center;
 }
 
 .social-links {
@@ -418,6 +422,14 @@
 	}
 
 	.footer-section {
+		text-align: center;
+	}
+
+	.footer-about .footer-description {
+		text-align: justify;
+	}
+
+	.footer-section.footer-social p {
 		text-align: center;
 	}
 
