@@ -86,6 +86,11 @@
 	margin-top: 20px;
 }
 
+.footer-logo-link {
+	display: inline-block;
+	text-decoration: none;
+}
+
 .footer-logo img {
 	max-width: 150px;
 	height: auto;
@@ -240,10 +245,11 @@
 
 .footer-bottom-content {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 15px;
+	gap: 8px;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -251,6 +257,12 @@
 .copyright {
 	margin: 0;
 	font-size: 0.9rem;
+}
+
+/* Line breaks that should appear only on small screens */
+.footer-break-mobile,
+.developer-break-mobile {
+	display: none;
 }
 
 .footer-legal {
@@ -476,13 +488,41 @@
 		text-align: center;
 		justify-content: center;
 	}
+
+	.footer-break-mobile,
+	.developer-break-mobile {
+		display: block;
+	}
+
+	.developer-content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.developer-info {
+		justify-content: center;
+	}
 }
 
 /* Mobile */
 @media (max-width: 480px) {
+	.developer-content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.developer-text {
+		justify-content: center;
+	}
+
 	.developer-info {
 		flex-direction: column;
 		gap: 10px;
+		justify-content: center;
+	}
+
+	.developer-social {
+		justify-content: center;
 	}
 }
 
