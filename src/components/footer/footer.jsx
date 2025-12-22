@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoBranco from '../../assets/img/logo_atual_branco.png';
 import './footer.css';
 import {
@@ -17,6 +18,10 @@ import {
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
+	const handleGoHomeTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
 	return (
 		<footer className="footer">
 			{/* Main Footer */}
@@ -30,7 +35,15 @@ const Footer = () => {
 							do patrimônio espeleológico brasileiro desde sua fundação.
 						</p>
 						<div className="footer-logo">
-							<img src={logoBranco} alt="EGRIC Logo" />
+							<Link
+								to="/"
+								onClick={handleGoHomeTop}
+								className="footer-logo-link"
+								aria-label="Ir para a página inicial"
+								title="Voltar ao início"
+							>
+								<img src={logoBranco} alt="EGRIC Logo" />
+							</Link>
 						</div>
 					</div>
 
@@ -117,7 +130,9 @@ const Footer = () => {
 				<div className="footer-container">
 					<div className="footer-bottom-content">
 						<p className="copyright">
-							&copy; {currentYear} EGRIC - Espeleo Grupo Rio Claro. Todos os direitos reservados.
+							&copy; {currentYear} EGRIC - Espeleo Grupo Rio Claro.
+							<br className="footer-break-mobile" />
+							Todos os direitos reservados.
 						</p>
 						<div className="footer-legal">
 							<a href="#privacidade">Política de Privacidade</a>
@@ -134,6 +149,7 @@ const Footer = () => {
 					<div className="developer-content">
 						<p className="developer-text">
 							Desenvolvido com <span className="heart">♥</span> por
+							<br className="developer-break-mobile" />
 						</p>
 						<div className="developer-info">
 							<a
