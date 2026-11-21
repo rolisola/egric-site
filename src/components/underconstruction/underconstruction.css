@@ -6,7 +6,7 @@
 
 .underconstruction__content {
 	text-align: center;
-	border: 1px dashed rgba(100, 108, 255, 0.45);
+	border: 1px dashed rgba(var(--egric-blue-rgb), 0.45);
 	border-radius: 12px;
 	background: rgba(255, 255, 255, 0.04);
 }

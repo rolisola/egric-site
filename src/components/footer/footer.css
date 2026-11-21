@@ -11,7 +11,7 @@
    MAIN FOOTER
    ============================================ */
 .footer-main {
-	background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+	background: linear-gradient(135deg, var(--egric-charcoal-800) 0%, var(--egric-charcoal-900) 100%);
 	color: #ffffff;
 	padding: 60px 20px 40px;
 	position: relative;
@@ -26,11 +26,11 @@
 	right: 0;
 	height: 4px;
 	background: linear-gradient(90deg,
-			#ff6b35 0%,
-			#f7931e 25%,
-			#fdc830 50%,
-			#f7931e 75%,
-			#ff6b35 100%);
+			var(--egric-blue) 0%,
+			var(--egric-blue-light) 25%,
+			var(--egric-white) 50%,
+			var(--egric-blue-light) 75%,
+			var(--egric-blue) 100%);
 }
 
 .footer-container {
@@ -48,7 +48,7 @@
    FOOTER SECTIONS
    ============================================ */
 .footer-section h3 {
-	color: #fdc830;
+	color: var(--egric-blue);
 	font-size: 1.4rem;
 	margin-bottom: 20px;
 	font-weight: 700;
@@ -65,7 +65,7 @@
 	bottom: 0;
 	width: 50px;
 	height: 3px;
-	background: linear-gradient(90deg, #ff6b35, #fdc830);
+	background: linear-gradient(90deg, var(--egric-blue-light), var(--egric-blue));
 	border-radius: 2px;
 }
 
@@ -74,7 +74,7 @@
    ============================================ */
 .footer-about .footer-description {
 	line-height: 1.8;
-	color: #e0e0e0;
+	color: var(--egric-gray-light);
 	margin-bottom: 20px;
 	font-size: 0.95rem;
 	text-align: justify;
@@ -115,7 +115,7 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
-	color: #e0e0e0;
+	color: var(--egric-gray-light);
 	font-size: 1.05rem;
 	transition: transform 0.3s ease;
 }
@@ -125,20 +125,20 @@
 }
 
 .footer-icon {
-	color: #fdc830;
+	color: var(--egric-blue);
 	margin-right: 15px;
 	font-size: 1.5rem;
 	min-width: 24px;
 }
 
 .contact-list a {
-	color: #e0e0e0;
+	color: var(--egric-gray-light);
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 .contact-list a:hover {
-	color: #fdc830;
+	color: var(--egric-blue);
 }
 
 /* ============================================
@@ -155,7 +155,7 @@
 }
 
 .footer-menu a {
-	color: #e0e0e0;
+	color: var(--egric-gray-light);
 	text-decoration: none;
 	font-size: 0.95rem;
 	transition: all 0.3s ease;
@@ -168,12 +168,12 @@
 	content: '▸';
 	position: absolute;
 	left: 0;
-	color: #fdc830;
+	color: var(--egric-blue);
 	transition: transform 0.3s ease;
 }
 
 .footer-menu a:hover {
-	color: #fdc830;
+	color: var(--egric-blue);
 	transform: translateX(5px);
 }
 
@@ -185,7 +185,7 @@
    SOCIAL SECTION
    ============================================ */
 .footer-social p {
-	color: #e0e0e0;
+	color: var(--egric-gray-light);
 	margin-bottom: 20px;
 	font-size: 0.95rem;
 	text-align: justify;
@@ -237,7 +237,7 @@
    FOOTER BOTTOM - RIGHTS
    ============================================ */
 .footer-bottom {
-	background: #0f0f1e;
+	background: var(--egric-charcoal-950);
 	color: #b0b0b0;
 	padding: 15px 20px;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -279,7 +279,7 @@
 }
 
 .footer-legal a:hover {
-	color: #fdc830;
+	color: var(--egric-blue);
 }
 
 .separator {
@@ -351,8 +351,8 @@
 }
 
 .developer-link:hover {
-	color: #fdc830;
-	background: rgba(253, 200, 48, 0.1);
+	color: var(--egric-blue);
+	background: rgba(var(--egric-blue-rgb), 0.1);
 }
 
 .dev-icon {
@@ -383,8 +383,8 @@
 }
 
 .dev-social-link:hover {
-	background: rgba(253, 200, 48, 0.2);
-	color: #fdc830;
+	background: rgba(var(--egric-blue-rgb), 0.2);
+	color: var(--egric-blue);
 	transform: translateY(-3px);
 }
 

@@ -2,7 +2,7 @@
 .cartilhas-section {
 	min-height: 100vh;
 	padding: var(--header-height) 0 80px;
-	background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
+	background: var(--egric-gradient-bg);
 	position: relative;
 }
 
@@ -14,8 +14,8 @@
 	right: 0;
 	bottom: 0;
 	background:
-		radial-gradient(circle at 20% 30%, rgba(253, 200, 48, 0.05) 0%, transparent 50%),
-		radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+		radial-gradient(circle at 20% 30%, rgba(var(--egric-blue-rgb), 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 80% 70%, rgba(var(--egric-blue-light-rgb), 0.05) 0%, transparent 50%);
 	pointer-events: none;
 }
 
@@ -37,7 +37,7 @@
 .cartilhas-header h1 {
 	font-size: 3rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #fdc830 0%, #ff6b35 100%);
+	background: linear-gradient(135deg, var(--egric-blue) 0%, var(--egric-blue-light) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -55,7 +55,7 @@
 }
 
 .link-educacao {
-	color: #fdc830;
+	color: var(--egric-blue-light);
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s ease;
@@ -63,8 +63,8 @@
 }
 
 .link-educacao:hover {
-	color: #ff6b35;
-	border-bottom-color: #ff6b35;
+	color: var(--egric-blue);
+	border-bottom-color: var(--egric-blue);
 }
 
 /* Lista de Cartilhas */
@@ -82,7 +82,7 @@
 /* Card de Cartilha */
 .cartilha-card {
 	background: rgba(255, 255, 255, 0.05);
-	border: 2px solid rgba(253, 200, 48, 0.2);
+	border: 2px solid rgba(var(--egric-blue-rgb), 0.2);
 	border-radius: 20px;
 	padding: 30px;
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -102,15 +102,15 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #fdc830 0%, #ff6b35 100%);
+	background: linear-gradient(90deg, var(--egric-blue) 0%, var(--egric-blue-light) 100%);
 	transform: scaleX(0);
 	transition: transform 0.4s ease;
 }
 
 .cartilha-card:hover {
 	transform: translateX(10px);
-	border-color: #fdc830;
-	box-shadow: 0 20px 40px rgba(253, 200, 48, 0.3);
+	border-color: var(--egric-blue);
+	box-shadow: 0 20px 40px rgba(var(--egric-blue-rgb), 0.3);
 }
 
 .cartilha-card:hover::before {
@@ -128,13 +128,13 @@
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
 	overflow: hidden;
-	border: 2px solid rgba(253, 200, 48, 0.2);
+	border: 2px solid rgba(var(--egric-blue-rgb), 0.2);
 	transition: all 0.3s ease;
 }
 
 .cartilha-card:hover .card-preview {
-	border-color: #fdc830;
-	box-shadow: 0 10px 30px rgba(253, 200, 48, 0.4);
+	border-color: var(--egric-blue);
+	box-shadow: 0 10px 30px rgba(var(--egric-blue-rgb), 0.4);
 }
 
 .card-preview .react-pdf__Document {
@@ -167,8 +167,8 @@
 .spinner-small {
 	width: 40px;
 	height: 40px;
-	border: 3px solid rgba(253, 200, 48, 0.2);
-	border-top-color: #fdc830;
+	border: 3px solid rgba(var(--egric-blue-rgb), 0.2);
+	border-top-color: var(--egric-blue);
 	border-radius: 50%;
 	animation: spin 1s linear infinite;
 }
@@ -195,7 +195,7 @@
 }
 
 .card-content h2 {
-	color: #fdc830;
+	color: var(--egric-blue);
 	font-size: 1.8rem;
 	font-weight: 700;
 	margin-bottom: 16px;
@@ -243,23 +243,23 @@
 }
 
 .btn-primary {
-	background: linear-gradient(135deg, #ff6b35 0%, #fdc830 100%);
-	color: #1a1a2e;
+	background: linear-gradient(135deg, var(--egric-blue-light) 0%, var(--egric-blue) 100%);
+	color: var(--egric-charcoal-900);
 }
 
 .btn-primary:hover {
-	background: linear-gradient(135deg, #ff8556 0%, #ffdb4d 100%);
+	background: linear-gradient(135deg, #a3cff0 0%, #1aa6e3 100%);
 }
 
 .btn-secondary {
 	background: rgba(255, 255, 255, 0.08);
 	color: #fff;
-	border: 2px solid rgba(253, 200, 48, 0.4);
+	border: 2px solid rgba(var(--egric-blue-rgb), 0.4);
 }
 
 .btn-secondary:hover {
-	background: rgba(253, 200, 48, 0.15);
-	border-color: #fdc830;
+	background: rgba(var(--egric-blue-rgb), 0.15);
+	border-color: var(--egric-blue);
 }
 
 .badge {
@@ -269,7 +269,7 @@
 	padding: 10px 20px;
 	border-radius: 999px;
 	background: rgba(255, 255, 255, 0.05);
-	border: 2px dashed rgba(253, 200, 48, 0.3);
+	border: 2px dashed rgba(var(--egric-blue-rgb), 0.3);
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 0.95rem;
 	font-weight: 600;
