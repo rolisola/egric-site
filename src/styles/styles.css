@@ -1,8 +1,18 @@
 
+/*
+ * --header-height é definido em components/header/header.css (por breakpoint).
+ * O fundo das páginas começa atrás do header fixo; o padding-top soma a altura dele.
+ */
+
+/* Ao rolar até uma âncora (#id), deixa o alvo abaixo do header fixo */
+[id] {
+	scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
 /* Padrão visual (baseado em Cartilhas) para páginas de conteúdo */
 .page-shell {
 	min-height: 100vh;
-	padding: 90px 0 80px;
+	padding: calc(var(--header-height) + 90px) 0 80px;
 	background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
 	color: rgba(255, 255, 255, 0.87);
 	position: relative;
@@ -68,7 +78,7 @@
 
 @media (max-width: 1024px) {
 	.page-shell {
-		padding-top: 84px;
+		padding-top: calc(var(--header-height) + 84px);
 	}
 
 	.page-header h1 {
@@ -78,7 +88,7 @@
 
 @media (max-width: 768px) {
 	.page-shell {
-		padding-top: 78px;
+		padding-top: calc(var(--header-height) + 78px);
 		padding-bottom: 64px;
 	}
 
