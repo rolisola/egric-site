@@ -11,7 +11,7 @@
    MAIN FOOTER
    ============================================ */
 .footer-main {
-	background: linear-gradient(135deg, var(--egric-charcoal-800) 0%, var(--egric-charcoal-900) 100%);
+	background: linear-gradient(135deg, var(--egric-blue) 0%, var(--egric-blue-dark) 100%);
 	color: #ffffff;
 	padding: 60px 20px 40px;
 	position: relative;
@@ -26,11 +26,11 @@
 	right: 0;
 	height: 4px;
 	background: linear-gradient(90deg,
-			var(--egric-blue) 0%,
-			var(--egric-blue-light) 25%,
+			var(--egric-charcoal-900) 0%,
+			var(--egric-charcoal-800) 25%,
 			var(--egric-white) 50%,
-			var(--egric-blue-light) 75%,
-			var(--egric-blue) 100%);
+			var(--egric-charcoal-800) 75%,
+			var(--egric-charcoal-900) 100%);
 }
 
 .footer-container {
@@ -48,7 +48,7 @@
    FOOTER SECTIONS
    ============================================ */
 .footer-section h3 {
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 	font-size: 1.4rem;
 	margin-bottom: 20px;
 	font-weight: 700;
@@ -65,7 +65,7 @@
 	bottom: 0;
 	width: 50px;
 	height: 3px;
-	background: linear-gradient(90deg, var(--egric-blue-light), var(--egric-blue));
+	background: linear-gradient(90deg, var(--egric-charcoal-800), var(--egric-charcoal-900));
 	border-radius: 2px;
 }
 
@@ -74,7 +74,7 @@
    ============================================ */
 .footer-about .footer-description {
 	line-height: 1.8;
-	color: var(--egric-gray-light);
+	color: var(--egric-blue-pale);
 	margin-bottom: 20px;
 	font-size: 0.95rem;
 	text-align: justify;
@@ -115,7 +115,7 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
-	color: var(--egric-gray-light);
+	color: var(--egric-blue-pale);
 	font-size: 1.05rem;
 	transition: transform 0.3s ease;
 }
@@ -125,20 +125,20 @@
 }
 
 .footer-icon {
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 	margin-right: 15px;
 	font-size: 1.5rem;
 	min-width: 24px;
 }
 
 .contact-list a {
-	color: var(--egric-gray-light);
+	color: var(--egric-blue-pale);
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 .contact-list a:hover {
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 }
 
 /* ============================================
@@ -155,7 +155,7 @@
 }
 
 .footer-menu a {
-	color: var(--egric-gray-light);
+	color: var(--egric-blue-pale);
 	text-decoration: none;
 	font-size: 0.95rem;
 	transition: all 0.3s ease;
@@ -168,12 +168,12 @@
 	content: '▸';
 	position: absolute;
 	left: 0;
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 	transition: transform 0.3s ease;
 }
 
 .footer-menu a:hover {
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 	transform: translateX(5px);
 }
 
@@ -185,7 +185,7 @@
    SOCIAL SECTION
    ============================================ */
 .footer-social p {
-	color: var(--egric-gray-light);
+	color: var(--egric-blue-pale);
 	margin-bottom: 20px;
 	font-size: 0.95rem;
 	text-align: justify;
@@ -237,8 +237,8 @@
    FOOTER BOTTOM - RIGHTS
    ============================================ */
 .footer-bottom {
-	background: var(--egric-charcoal-950);
-	color: #b0b0b0;
+	background: var(--egric-blue-deep);
+	color: #a9d3ee;
 	padding: 15px 20px;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -272,26 +272,26 @@
 }
 
 .footer-legal a {
-	color: #b0b0b0;
+	color: #a9d3ee;
 	text-decoration: none;
 	font-size: 0.9rem;
 	transition: color 0.3s ease;
 }
 
 .footer-legal a:hover {
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 }
 
 .separator {
-	color: #555;
+	color: #4f8fb5;
 }
 
 /* ============================================
    DEVELOPER FOOTER
    ============================================ */
 .footer-developer {
-	background: #000000;
-	color: #888;
+	background: var(--egric-blue-abyss);
+	color: #8cc2e3;
 	padding: 6px;
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -343,7 +343,7 @@
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	color: #b0b0b0;
+	color: #a9d3ee;
 	text-decoration: none;
 	transition: all 0.3s ease;
 	padding: 5px 10px;
@@ -351,8 +351,8 @@
 }
 
 .developer-link:hover {
-	color: var(--egric-blue);
-	background: rgba(var(--egric-blue-rgb), 0.1);
+	color: var(--egric-charcoal-900);
+	background: rgba(var(--egric-charcoal-rgb), 0.1);
 }
 
 .dev-icon {
@@ -376,15 +376,15 @@
 	height: 32px;
 	border-radius: 50%;
 	background: rgba(255, 255, 255, 0.05);
-	color: #888;
+	color: #8cc2e3;
 	font-size: 1rem;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
 .dev-social-link:hover {
-	background: rgba(var(--egric-blue-rgb), 0.2);
-	color: var(--egric-blue);
+	background: rgba(var(--egric-charcoal-rgb), 0.2);
+	color: var(--egric-charcoal-900);
 	transform: translateY(-3px);
 }
 

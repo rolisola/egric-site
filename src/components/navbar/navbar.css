@@ -37,13 +37,13 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--egric-blue), var(--egric-blue-light));
+  background: linear-gradient(90deg, var(--egric-charcoal-900), var(--egric-charcoal-800));
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
 
 .navbar-item a:hover {
-  color: var(--egric-blue-light);
+  color: var(--egric-charcoal-900);
 }
 
 .navbar-item a:hover::before {
@@ -51,12 +51,12 @@
 }
 
 .navbar-item a:active {
-  color: var(--egric-blue);
+  color: var(--egric-charcoal-900);
 }
 
 /* Active link style (você pode adicionar uma classe 'active' via JS) */
 .navbar-item a.active {
-  color: var(--egric-blue-light);
+  color: var(--egric-charcoal-900);
 }
 
 .navbar-item a.active::before {

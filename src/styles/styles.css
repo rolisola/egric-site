@@ -26,8 +26,8 @@
 	right: 0;
 	bottom: 0;
 	background:
-		radial-gradient(circle at 20% 30%, rgba(var(--egric-blue-rgb), 0.05) 0%, transparent 50%),
-		radial-gradient(circle at 80% 70%, rgba(var(--egric-blue-light-rgb), 0.05) 0%, transparent 50%);
+		radial-gradient(circle at 20% 30%, rgba(var(--egric-charcoal-rgb), 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 80% 70%, rgba(var(--egric-charcoal-800-rgb), 0.05) 0%, transparent 50%);
 	pointer-events: none;
 }
 
@@ -47,7 +47,7 @@
 .page-header h1 {
 	font-size: 3rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, var(--egric-blue) 0%, var(--egric-blue-light) 100%);
+	background: linear-gradient(135deg, var(--egric-charcoal-900) 0%, var(--egric-charcoal-800) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -64,7 +64,7 @@
 }
 
 .link-destaque {
-	color: var(--egric-blue-light);
+	color: var(--egric-charcoal-900);
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.25s ease;
@@ -72,8 +72,8 @@
 }
 
 .link-destaque:hover {
-	color: var(--egric-blue);
-	border-bottom-color: var(--egric-blue);
+	color: var(--egric-white);
+	border-bottom-color: var(--egric-white);
 }
 
 @media (max-width: 1024px) {

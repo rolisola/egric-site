@@ -11,7 +11,14 @@
 	--egric-gray-light: #d2d3d5;
 	--egric-blue-rgb: 0, 152, 218;
 	--egric-blue-light-rgb: 136, 192, 235;
-	--egric-gradient-bg: linear-gradient(135deg, var(--egric-charcoal-900) 0%, #2b2929 50%, var(--egric-charcoal-800) 100%);
+	--egric-blue-deep: #005a82;
+	--egric-blue-abyss: #003a55;
+	--egric-blue-pale: #dceefa;
+	--egric-blue-dark-rgb: 0, 121, 174;
+	--egric-charcoal-rgb: 32, 30, 30;
+	--egric-charcoal-800-rgb: 55, 52, 53;
+	/* Versão azul: fundos em azul, destaques em grafite */
+	--egric-gradient-bg: linear-gradient(135deg, var(--egric-blue-deep) 0%, var(--egric-blue-dark) 55%, var(--egric-blue) 100%);
 
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
@@ -19,7 +26,7 @@
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: var(--egric-charcoal-900);
+	background-color: var(--egric-blue-dark);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -29,12 +36,12 @@
 
 a {
 	font-weight: 500;
-	color: var(--egric-blue-light);
+	color: var(--egric-charcoal-900);
 	text-decoration: inherit;
 }
 
 a:hover {
-	color: var(--egric-blue);
+	color: var(--egric-white);
 }
 
 body {
@@ -55,13 +62,13 @@ button {
 	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
-	background-color: var(--egric-charcoal-900);
+	background-color: var(--egric-blue-dark);
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
 
 button:hover {
-	border-color: var(--egric-blue);
+	border-color: var(--egric-charcoal-900);
 }
 
 button:focus,

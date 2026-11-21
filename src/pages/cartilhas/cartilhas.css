@@ -14,8 +14,8 @@
 	right: 0;
 	bottom: 0;
 	background:
-		radial-gradient(circle at 20% 30%, rgba(var(--egric-blue-rgb), 0.05) 0%, transparent 50%),
-		radial-gradient(circle at 80% 70%, rgba(var(--egric-blue-light-rgb), 0.05) 0%, transparent 50%);
+		radial-gradient(circle at 20% 30%, rgba(var(--egric-charcoal-rgb), 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 80% 70%, rgba(var(--egric-charcoal-800-rgb), 0.05) 0%, transparent 50%);
 	pointer-events: none;
 }
 
@@ -37,7 +37,7 @@
 .cartilhas-header h1 {
 	font-size: 3rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, var(--egric-blue) 0%, var(--egric-blue-light) 100%);
+	background: linear-gradient(135deg, var(--egric-charcoal-900) 0%, var(--egric-charcoal-800) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -55,7 +55,7 @@
 }
 
 .link-educacao {
-	color: var(--egric-blue-light);
+	color: var(--egric-charcoal-900);
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s ease;
@@ -63,8 +63,8 @@
 }
 
 .link-educacao:hover {
-	color: var(--egric-blue);
-	border-bottom-color: var(--egric-blue);
+	color: var(--egric-white);
+	border-bottom-color: var(--egric-white);
 }
 
 /* Lista de Cartilhas */
@@ -82,7 +82,7 @@
 /* Card de Cartilha */
 .cartilha-card {
 	background: rgba(255, 255, 255, 0.05);
-	border: 2px solid rgba(var(--egric-blue-rgb), 0.2);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.2);
 	border-radius: 20px;
 	padding: 30px;
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -102,15 +102,15 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, var(--egric-blue) 0%, var(--egric-blue-light) 100%);
+	background: linear-gradient(90deg, var(--egric-charcoal-900) 0%, var(--egric-charcoal-800) 100%);
 	transform: scaleX(0);
 	transition: transform 0.4s ease;
 }
 
 .cartilha-card:hover {
 	transform: translateX(10px);
-	border-color: var(--egric-blue);
-	box-shadow: 0 20px 40px rgba(var(--egric-blue-rgb), 0.3);
+	border-color: var(--egric-charcoal-900);
+	box-shadow: 0 20px 40px rgba(var(--egric-charcoal-rgb), 0.3);
 }
 
 .cartilha-card:hover::before {
@@ -128,13 +128,13 @@
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
 	overflow: hidden;
-	border: 2px solid rgba(var(--egric-blue-rgb), 0.2);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.2);
 	transition: all 0.3s ease;
 }
 
 .cartilha-card:hover .card-preview {
-	border-color: var(--egric-blue);
-	box-shadow: 0 10px 30px rgba(var(--egric-blue-rgb), 0.4);
+	border-color: var(--egric-charcoal-900);
+	box-shadow: 0 10px 30px rgba(var(--egric-charcoal-rgb), 0.4);
 }
 
 .card-preview .react-pdf__Document {
@@ -167,8 +167,8 @@
 .spinner-small {
 	width: 40px;
 	height: 40px;
-	border: 3px solid rgba(var(--egric-blue-rgb), 0.2);
-	border-top-color: var(--egric-blue);
+	border: 3px solid rgba(var(--egric-charcoal-rgb), 0.2);
+	border-top-color: var(--egric-charcoal-900);
 	border-radius: 50%;
 	animation: spin 1s linear infinite;
 }
@@ -195,7 +195,7 @@
 }
 
 .card-content h2 {
-	color: var(--egric-blue);
+	color: var(--egric-charcoal-900);
 	font-size: 1.8rem;
 	font-weight: 700;
 	margin-bottom: 16px;
@@ -243,23 +243,23 @@
 }
 
 .btn-primary {
-	background: linear-gradient(135deg, var(--egric-blue-light) 0%, var(--egric-blue) 100%);
-	color: var(--egric-charcoal-900);
+	background: linear-gradient(135deg, var(--egric-charcoal-800) 0%, var(--egric-charcoal-900) 100%);
+	color: var(--egric-white);
 }
 
 .btn-primary:hover {
-	background: linear-gradient(135deg, #a3cff0 0%, #1aa6e3 100%);
+	background: linear-gradient(135deg, var(--egric-charcoal-700) 0%, var(--egric-charcoal-800) 100%);
 }
 
 .btn-secondary {
 	background: rgba(255, 255, 255, 0.08);
 	color: #fff;
-	border: 2px solid rgba(var(--egric-blue-rgb), 0.4);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.4);
 }
 
 .btn-secondary:hover {
-	background: rgba(var(--egric-blue-rgb), 0.15);
-	border-color: var(--egric-blue);
+	background: rgba(var(--egric-charcoal-rgb), 0.15);
+	border-color: var(--egric-charcoal-900);
 }
 
 .badge {
@@ -269,7 +269,7 @@
 	padding: 10px 20px;
 	border-radius: 999px;
 	background: rgba(255, 255, 255, 0.05);
-	border: 2px dashed rgba(var(--egric-blue-rgb), 0.3);
+	border: 2px dashed rgba(var(--egric-charcoal-rgb), 0.3);
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 0.95rem;
 	font-weight: 600;
