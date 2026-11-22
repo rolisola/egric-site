@@ -47,7 +47,7 @@ const Cartilhas = () => {
                             <article
                                 key={cartilha.id}
                                 id={`cartilha-${cartilha.id}`}
-                                className="cartilha-card"
+                                className="cartilha-card card card--interactive"
                             >
                                 <div className="card-preview">
                                     {cartilha.disponivel ? (

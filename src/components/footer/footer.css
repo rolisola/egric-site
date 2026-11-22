@@ -237,7 +237,7 @@
    FOOTER BOTTOM - RIGHTS
    ============================================ */
 .footer-bottom {
-	background: var(--egric-blue-deep);
+	background: #0f0f1e;
 	color: #a9d3ee;
 	padding: 15px 20px;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -290,7 +290,7 @@
    DEVELOPER FOOTER
    ============================================ */
 .footer-developer {
-	background: var(--egric-blue-abyss);
+	background: #000000;
 	color: #8cc2e3;
 	padding: 6px;
 	border-top: 1px solid rgba(255, 255, 255, 0.05);

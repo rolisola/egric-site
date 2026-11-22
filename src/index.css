@@ -14,6 +14,8 @@
 	--egric-blue-deep: #005a82;
 	--egric-blue-abyss: #003a55;
 	--egric-blue-pale: #dceefa;
+	/* Mistura grafite #373435 (75%) + azul #0098DA (25%) */
+	--egric-gray-blue: #294d5e;
 	--egric-blue-dark-rgb: 0, 121, 174;
 	--egric-charcoal-rgb: 32, 30, 30;
 	--egric-charcoal-800-rgb: 55, 52, 53;

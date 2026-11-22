@@ -41,6 +41,9 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	/* folga para as letras com perna (g, p, q, ç) não serem cortadas pelo background-clip */
+	line-height: 1.2;
+	padding-bottom: 0.12em;
 	margin-top: 0;
 	margin-bottom: 16px;
 	animation: fadeInDown 0.8s ease;
@@ -79,42 +82,12 @@
 	margin-right: auto;
 }
 
-/* Card de Cartilha */
+/* Card de Cartilha — visual vem de .card (styles.css); aqui só o layout */
 .cartilha-card {
-	background: rgba(255, 255, 255, 0.05);
-	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.2);
-	border-radius: 20px;
-	padding: 30px;
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	backdrop-filter: blur(10px);
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 	align-items: center;
-	position: relative;
-	overflow: hidden;
-}
-
-.cartilha-card::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 4px;
-	background: linear-gradient(90deg, var(--egric-charcoal-900) 0%, var(--egric-charcoal-800) 100%);
-	transform: scaleX(0);
-	transition: transform 0.4s ease;
-}
-
-.cartilha-card:hover {
-	transform: translateX(10px);
-	border-color: var(--egric-charcoal-900);
-	box-shadow: 0 20px 40px rgba(var(--egric-charcoal-rgb), 0.3);
-}
-
-.cartilha-card:hover::before {
-	transform: scaleX(1);
 }
 
 /* Preview do PDF */
@@ -195,7 +168,7 @@
 }
 
 .card-content h2 {
-	color: var(--egric-charcoal-900);
+	color: #000000;
 	font-size: 1.8rem;
 	font-weight: 700;
 	margin-bottom: 16px;
@@ -332,10 +305,6 @@
 		flex-direction: column;
 		padding: 20px;
 		gap: 20px;
-	}
-
-	.cartilha-card:hover {
-		transform: translateY(-5px);
 	}
 
 	.card-preview {
