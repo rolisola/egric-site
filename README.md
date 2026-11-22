@@ -90,6 +90,42 @@ Build output directory: build
 Node version: 18
 ```
 
+## ✉️ Formulário de contato
+
+O card de contato da página inicial (`src/components/contato`) envia para `POST /api/contato`,
+uma [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) em `functions/api/contato.js`.
+As regras de validação ficam em `src/shared/contato.js` e valem para o navegador e para o servidor.
+
+**Proteções:** só aceita POST/JSON vindo do próprio site (header `Origin`), corpo de no máximo 10 KB,
+5 envios por IP por hora, campo *honeypot*, tempo mínimo de preenchimento de 3 s,
+[Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) verificado no servidor,
+validação e limpeza de todos os campos (incluindo caracteres invisíveis e limite de links) e e-mail só em texto puro.
+
+### Testar localmente
+
+`yarn dev` já executa a função dentro do servidor do Vite, com as chaves de teste do Turnstile.
+Enquanto `CONTATO_ENVIAR_EMAIL` não for `true`, **nenhum e-mail é enviado**: a mensagem aparece no terminal do `yarn dev`.
+
+### Variáveis (Cloudflare Pages → Settings → Variables and Secrets)
+
+Veja `.env.example`. Para testar localmente com outros valores, copie para `.env.local`.
+
+| Variável | Onde | Descrição |
+| --- | --- | --- |
+| `VITE_TURNSTILE_SITE_KEY` | build | Site key do Turnstile |
+| `TURNSTILE_SECRET_KEY` | secret | Secret key do Turnstile (sem ela, o envio é recusado) |
+| `CONTATO_ENVIAR_EMAIL` | variável | `true` para enviar de verdade; qualquer outro valor = modo teste |
+| `RESEND_API_KEY` | secret | Chave da API do [Resend](https://resend.com) |
+| `CONTATO_EMAIL_REMETENTE` | variável | Remetente num domínio verificado no Resend |
+| `CONTATO_EMAIL_DESTINO` | variável | Padrão: `egric.espeleogrupo@gmail.com` |
+| `ALLOWED_ORIGINS` | variável | Opcional, origens aceitas separadas por vírgula |
+
+Para o limite por IP valer entre todos os servidores da Cloudflare, crie um namespace KV e vincule-o
+ao projeto com o nome **`CONTATO_RATE_LIMIT`** (Settings → Bindings). Sem ele, o limite é por instância.
+
+Para testar num deploy de preview, use as [chaves de teste do Turnstile](https://developers.cloudflare.com/turnstile/troubleshooting/testing/)
+(`1x00000000000000000000AA` / `1x0000000000000000000000000000000AA`).
+
 ### Outras Plataformas
 
 O projeto também pode ser hospedado em:

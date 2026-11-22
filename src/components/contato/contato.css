@@ -1,0 +1,173 @@
+.contato-card.card {
+	padding: 36px;
+}
+
+.contato-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.contato-campo {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-width: 0;
+}
+
+.contato-campo--full {
+	grid-column: 1 / -1;
+}
+
+.contato-campo label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: var(--egric-white);
+}
+
+.contato-campo input,
+.contato-campo textarea {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 12px 14px;
+	font: inherit;
+	font-size: 1rem;
+	color: var(--egric-white);
+	background: rgba(var(--egric-charcoal-rgb), 0.35);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 10px;
+	transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contato-campo textarea {
+	resize: vertical;
+	min-height: 140px;
+	line-height: 1.6;
+}
+
+.contato-campo input::placeholder,
+.contato-campo textarea::placeholder {
+	color: rgba(255, 255, 255, 0.45);
+}
+
+.contato-campo input:focus,
+.contato-campo textarea:focus {
+	outline: none;
+	border-color: var(--egric-white);
+	background: rgba(var(--egric-charcoal-rgb), 0.5);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.contato-campo [aria-invalid='true'] {
+	border-color: #ffb4a8;
+}
+
+.contato-campo__ajuda {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	min-height: 1.2em;
+	font-size: 0.85rem;
+}
+
+.contato-campo__erro {
+	color: #ffd2ca;
+}
+
+.contato-campo__contador {
+	margin-left: auto;
+	color: rgba(255, 255, 255, 0.55);
+	font-variant-numeric: tabular-nums;
+}
+
+/* Fora da tela, mas não display:none (alguns robôs ignoram campos ocultos) */
+.contato-honeypot {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.contato-captcha {
+	margin-top: 8px;
+	min-height: 65px;
+}
+
+.contato-captcha:empty {
+	min-height: 0;
+}
+
+.contato-aviso {
+	margin: 16px 0 0;
+	padding: 12px 16px;
+	border-radius: 10px;
+	font-size: 0.95rem;
+}
+
+.contato-aviso--erro {
+	color: var(--egric-white);
+	background: rgba(160, 30, 20, 0.35);
+	border: 1px solid rgba(255, 180, 168, 0.45);
+}
+
+.contato-acoes {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 16px 24px;
+	margin-top: 24px;
+}
+
+.contato-acoes .btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+.contato-privacidade {
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.65);
+}
+
+.contato-sucesso {
+	text-align: center;
+}
+
+.contato-sucesso__icone {
+	font-size: 3rem;
+	color: var(--egric-blue-pale);
+	margin-bottom: 12px;
+}
+
+.contato-sucesso h3 {
+	margin: 0 0 8px;
+	font-size: 1.5rem;
+	color: var(--egric-white);
+}
+
+.contato-sucesso p {
+	margin: 0 auto 24px;
+	max-width: 460px;
+}
+
+@media (max-width: 968px) {
+	.contato-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.contato-card.card {
+		padding: 24px 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.contato-acoes .btn {
+		width: 100%;
+		justify-content: center;
+	}
+}

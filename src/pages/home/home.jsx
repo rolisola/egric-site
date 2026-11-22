@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight, FaBookOpen, FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaLeaf } from 'react-icons/fa';
 import { GiCaveEntrance } from 'react-icons/gi';
 import logoBranco from '../../assets/img/logo_atual_branco.png';
+import Contato from '../../components/contato/contato';
 import './home.css';
 
 const destaques = [
@@ -116,6 +117,23 @@ const Home = () => {
 									</span>
 								</Link>
 							))}
+						</div>
+					</div>
+				</section>
+
+				{/* Seção Contato */}
+				<section id="contato" className="section home-contato">
+					<div className="container">
+						<div className="home-section-header">
+							<span className="eyebrow">Contato</span>
+							<h2>Fale com o EGRIC</h2>
+							<p className="home-contato__intro">
+								Dúvidas sobre cursos, expedições ou como participar? Envie uma mensagem e retornaremos pelo e-mail informado.
+							</p>
+						</div>
+
+						<div className="home-contato__form">
+							<Contato />
 						</div>
 					</div>
 				</section>
