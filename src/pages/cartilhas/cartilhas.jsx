@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
 import './cartilhas.css';
 
@@ -6,70 +6,29 @@ import './cartilhas.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Cartilhas = () => {
-    const [selectedCartilha, setSelectedCartilha] = useState(null);
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-    const [scale, setScale] = useState(1.0);
-
-	const showUnavailableAlert = () => {
-		window.alert('Não é possível ler online ou baixar o PDF no momento.');
-	};
-
     const cartilhas = [
         {
             id: 'oqcaverna',
             titulo: 'O que é Caverna?',
             descricao: 'Será que cavernas realmente são assustadoras? Descubra cientificamente o que são as cavernas, o que as forma e seus ecossistemas.',
-            pdf: '/public/cartilhas/Cartilha1_O_que_e_caverna.pdf',
+            pdf: '/cartilhas/Cartilha1_O_que_e_caverna.pdf',
             disponivel: true
         },
         {
             id: 'oqespeleologia',
             titulo: 'O que é Espeleologia?',
             descricao: 'Conheça a ciência que transforma curiosidade em expedições seguras: da pré-história aos tempos atuais. Esta leitura revela como a espeleologia une aventura, pesquisa e proteção ambiental.',
-            pdf: '/public/cartilhas/Cartilha2_O_que_e_espeleologia.pdf',
+            pdf: '/cartilhas/Cartilha2_O_que_e_espeleologia.pdf',
             disponivel: true
         },
         {
             id: 'oqespeleogenese',
             titulo: 'O que é espeleogênese?',
             descricao: 'Entenda, passo a passo, como água, rocha e tempo esculpem salões gigantescos; você vai visualizar cada fase da espeleogênese e aprender a reconhecer as pistas de uma caverna ainda em formação.',
-            pdf: '/public/cartilhas/Cartilha3_O_que_e_espeleogenese.pdf',
+            pdf: '/cartilhas/Cartilha3_O_que_e_espeleogenese.pdf',
             disponivel: true
         }
     ];
-
-    const onDocumentLoadSuccess = ({ numPages }) => {
-        setNumPages(numPages);
-        setPageNumber(1);
-    };
-
-    const changePage = (offset) => {
-        setPageNumber(prevPageNumber => prevPageNumber + offset);
-    };
-
-    const previousPage = () => {
-        changePage(-1);
-    };
-
-    const nextPage = () => {
-        changePage(1);
-    };
-
-    const closeViewer = () => {
-        setSelectedCartilha(null);
-        setNumPages(null);
-        setPageNumber(1);
-        setScale(1.0);
-    };
-
-    const zoomIn = () => {
-        setScale(prevScale => Math.min(prevScale + 0.2, 2.0));
-    };
-
-    const zoomOut = () => {
-        setScale(prevScale => Math.max(prevScale - 0.2, 0.6));
-    };
 
     return (
         <div className="App">
@@ -78,7 +37,7 @@ const Cartilhas = () => {
                     <div className="cartilhas-header">
                         <h1>Cartilhas Educativas</h1>
                         <p className="subtitle">
-                            Materiais produzidos pela <a href="#comissao-educacao" className="link-educacao">Comissão de Educação</a> do EGRIC,
+                            Materiais produzidos pela <Link to="/comissoes#comissao-educacao" className="link-educacao">Comissão de Educação</Link> do EGRIC,
                             com foco em segurança, equipamentos, conservação e orientação a iniciantes.
                         </p>
                     </div>
@@ -88,7 +47,7 @@ const Cartilhas = () => {
                             <article
                                 key={cartilha.id}
                                 id={`cartilha-${cartilha.id}`}
-                                className="cartilha-card"
+                                className="cartilha-card card card--interactive"
                             >
                                 <div className="card-preview">
                                     {cartilha.disponivel ? (
@@ -127,21 +86,18 @@ const Cartilhas = () => {
                                     <div className="card-actions">
                                         {cartilha.disponivel ? (
                                             <>
-                                                <button
+                                                <a
                                                     className="btn btn-primary"
-												type="button"
-												onClick={showUnavailableAlert}
+                                                    href={cartilha.pdf}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
                                                 >
                                                     <span className="icon">📖</span> Ler Online
-                                                </button>
+                                                </a>
                                                 <a
                                                     className="btn btn-secondary"
                                                     href={cartilha.pdf}
                                                     download
-												onClick={(e) => {
-													e.preventDefault();
-													showUnavailableAlert();
-												}}
                                                 >
                                                     <span className="icon">📥</span> Baixar PDF
                                                 </a>
@@ -156,89 +112,6 @@ const Cartilhas = () => {
                             </article>
                         ))}
                     </div>
-
-                    {/* Visor de PDF Modal */}
-                    {selectedCartilha && (
-                        <div className="pdf-viewer-modal" onClick={closeViewer}>
-                            <div className="pdf-viewer-container" onClick={(e) => e.stopPropagation()}>
-                                <div className="pdf-viewer-header">
-                                    <h2>{selectedCartilha.titulo}</h2>
-                                    <button className="close-btn" onClick={closeViewer}>
-                                        ✕
-                                    </button>
-                                </div>
-
-                                <div className="pdf-viewer-controls">
-                                    <div className="controls-left">
-                                        <button
-                                            className="control-btn"
-                                            onClick={previousPage}
-                                            disabled={pageNumber <= 1}
-                                        >
-                                            ← Anterior
-                                        </button>
-                                        <span className="page-info">
-                                            Página {pageNumber} de {numPages || '...'}
-                                        </span>
-                                        <button
-                                            className="control-btn"
-                                            onClick={nextPage}
-                                            disabled={pageNumber >= numPages}
-                                        >
-                                            Próxima →
-                                        </button>
-                                    </div>
-
-                                    <div className="controls-right">
-                                        <button className="control-btn" onClick={zoomOut} disabled={scale <= 0.6}>
-                                            🔍−
-                                        </button>
-                                        <span className="zoom-info">{Math.round(scale * 100)}%</span>
-                                        <button className="control-btn" onClick={zoomIn} disabled={scale >= 2.0}>
-                                            🔍+
-                                        </button>
-                                        <a
-                                            href={selectedCartilha.pdf}
-                                            download
-                                            className="control-btn download-btn"
-											onClick={(e) => {
-												e.preventDefault();
-												showUnavailableAlert();
-											}}
-                                        >
-                                            📥 Baixar
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="pdf-viewer-content">
-                                    <Document
-                                        file={selectedCartilha.pdf}
-                                        onLoadSuccess={onDocumentLoadSuccess}
-                                        loading={
-                                            <div className="pdf-loading">
-                                                <div className="spinner"></div>
-                                                <p>Carregando PDF...</p>
-                                            </div>
-                                        }
-                                        error={
-                                            <div className="pdf-error">
-                                                <p>❌ Erro ao carregar o PDF</p>
-                                                <small>Verifique se o arquivo existe no caminho correto.</small>
-                                            </div>
-                                        }
-                                    >
-                                        <Page
-                                            pageNumber={pageNumber}
-                                            scale={scale}
-                                            renderTextLayer={true}
-                                            renderAnnotationLayer={true}
-                                        />
-                                    </Document>
-                                </div>
-                            </div>
-                        </div>
-                    )}
                 </div>
             </section>
         </div>

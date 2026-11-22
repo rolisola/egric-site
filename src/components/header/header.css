@@ -1,17 +1,65 @@
+/*
+ * Alturas do header (normal e compacto) por breakpoint.
+ * --header-height também é usado pelas páginas (styles.css / cartilhas.css)
+ * para começar o conteúdo abaixo do header fixo — por isso é sempre a altura NORMAL,
+ * assim o conteúdo não "pula" quando o header compacta.
+ */
+:root {
+	--header-height: 82px;
+	--header-height-compact: 60px;
+	--header-logo-height: 50px;
+	--header-logo-height-compact: 38px;
+}
+
+/* Header sempre fixo; fica compacto ao rolar para baixo e volta ao normal ao rolar para cima */
 .header {
-	background-color: #1a1a1a;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+/*
+ * Fundo do header numa camada própria. O backdrop-filter fica aqui (e não no .header)
+ * porque ele transformaria o .header no "containing block" do menu mobile (.navbar fixed),
+ * que passaria a se posicionar em relação ao header em vez da tela.
+ */
+.header::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-color: transparent;
+	transition: background-color 0.3s ease-in-out;
+}
+
+/* Sem faixa colorida: fora do topo, só desfoca o conteúdo que passa por trás dos botões */
+.header--scrolled::before {
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+/* Menu sanduíche aberto: o painel lateral tem fundo próprio */
+.header--menu-open::before {
+	-webkit-backdrop-filter: none;
+	backdrop-filter: none;
 }
 
 .header-container {
 	max-width: 1200px;
+	height: var(--header-height);
 	margin: 0 auto;
-	padding: 1rem 2rem;
+	padding: 0 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	transition: height 0.3s ease-in-out;
+}
+
+.header--compact .header-container {
+	height: var(--header-height-compact);
 }
 
 .logo a {
@@ -27,31 +75,49 @@
 }
 
 .logo img {
-	height: 50px;
+	height: var(--header-logo-height);
 	width: auto;
+	transition: height 0.3s ease-in-out;
+}
+
+.header--compact .logo img {
+	height: var(--header-logo-height-compact);
 }
 
 /* Navbar desktop */
 .navbar {
 	display: flex;
-	gap: 2rem;
+	gap: 0.75rem;
 	align-items: center;
+	transition: gap 0.3s ease-in-out;
 }
 
+/* Links como botões grafite com texto azul */
 .nav-link {
-	color: rgba(255, 255, 255, 0.87);
+	color: var(--egric-blue-light);
+	background-color: var(--egric-charcoal-800);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 	text-decoration: none;
-	font-weight: 500;
-	font-size: 1rem;
+	font-weight: 600;
+	font-size: 0.95rem;
+	letter-spacing: 0.03em;
 	padding: 0.5rem 1rem;
-	border-radius: 4px;
-	transition: all 0.2s ease;
+	border-radius: 10px;
+	transition: transform 0.2s ease, background-color 0.2s ease, padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
 	position: relative;
 }
 
+/* Hover: cresce 5% e o fundo vira grafite + azul */
 .nav-link:hover {
-	color: #646cff;
-	background-color: rgba(100, 108, 255, 0.1);
+	color: var(--egric-blue-light);
+	background-color: var(--egric-gray-blue);
+	transform: scale(1.05);
+}
+
+.nav-link:focus-visible {
+	outline: 2px solid var(--egric-white);
+	outline-offset: 2px;
 }
 
 .nav-link:active {
@@ -93,59 +159,59 @@
 	transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Classes do Headroom para animação */
-.headroom {
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
+/* Menu de navegação reduzido no header compacto (apenas desktop) */
+@media (min-width: 969px) {
+	.header--compact .navbar {
+		gap: 0.6rem;
+	}
+
+	.header--compact .nav-link {
+		font-size: 0.88rem;
+		padding: 0.35rem 0.85rem;
+	}
 }
 
-.headroom--unfixed {
-	position: fixed;
-	transform: translateY(0);
-}
-
-.headroom--scrolled {
-	transition: transform 0.3s ease-in-out;
-}
-
-.headroom--unpinned {
-	position: fixed;
-	transform: translateY(-100%);
-}
-
-.headroom--pinned {
-	position: fixed;
-	transform: translateY(0%);
+@media (min-width: 969px) and (max-width: 1024px) {
+	.header--compact .navbar {
+		gap: 0.5rem;
+	}
 }
 
 /* Media queries para responsividade */
 
 /* Tablets em modo paisagem e telas médias */
 @media (max-width: 1024px) {
+	:root {
+		--header-height: 78px;
+		--header-height-compact: 58px;
+	}
+
 	.header-container {
-		padding: 0.875rem 1.5rem;
+		padding: 0 1.5rem;
 	}
 
 	.navbar {
-		gap: 1.5rem;
+		gap: 0.6rem;
 	}
 
 	.nav-link {
-		font-size: 0.95rem;
-		padding: 0.5rem 0.875rem;
+		font-size: 0.88rem;
+		padding: 0.45rem 0.8rem;
 	}
 }
 
 /* Tablets em modo retrato */
 @media (max-width: 968px) {
-	.header-container {
-		padding: 0.75rem 1rem;
+	/* Mobile/tablet: apenas o logo à esquerda e o hambúrguer à direita */
+	:root {
+		--header-height: 64px;
+		--header-height-compact: 52px;
+		--header-logo-height: 40px;
+		--header-logo-height-compact: 32px;
 	}
 
-	.logo img {
-		height: 40px;
+	.header-container {
+		padding: 0 1rem;
 	}
 
 	/* Mostrar botão hambúrguer em tablets e mobile */
@@ -161,7 +227,7 @@
 		height: 100vh;
 		width: 65%;
 		max-width: 350px;
-		background-color: #1a1a1a;
+		background-color: var(--egric-blue-deep);
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -175,10 +241,17 @@
 		right: 0;
 	}
 
+	/* Painel com margem interna para os botões não encostarem nas bordas */
+	.navbar {
+		padding: 0 1.5rem;
+		box-sizing: border-box;
+	}
+
 	.nav-link {
 		font-size: 1.2rem;
 		padding: 0.875rem 1.75rem;
 		width: 100%;
+		box-sizing: border-box;
 		text-align: center;
 	}
 }
@@ -199,12 +272,15 @@
 
 /* Smartphones em modo retrato */
 @media (max-width: 480px) {
-	.header-container {
-		padding: 0.5rem 0.75rem;
+	:root {
+		--header-height: 51px;
+		--header-height-compact: 46px;
+		--header-logo-height: 35px;
+		--header-logo-height-compact: 30px;
 	}
 
-	.logo img {
-		height: 35px;
+	.header-container {
+		padding: 0 0.75rem;
 	}
 
 	.navbar {
@@ -220,12 +296,15 @@
 
 /* Smartphones pequenos */
 @media (max-width: 360px) {
-	.header-container {
-		padding: 0.5rem;
+	:root {
+		--header-height: 48px;
+		--header-height-compact: 44px;
+		--header-logo-height: 32px;
+		--header-logo-height-compact: 28px;
 	}
 
-	.logo img {
-		height: 32px;
+	.header-container {
+		padding: 0 0.5rem;
 	}
 
 	.navbar {
@@ -245,5 +324,16 @@
 	.mobile-menu-toggle span {
 		width: 26px;
 		height: 2.5px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.header,
+	.header::before,
+	.header-container,
+	.logo img,
+	.navbar,
+	.nav-link {
+		transition: none;
 	}
 }

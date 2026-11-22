@@ -68,11 +68,11 @@ const Footer = () => {
 							</li>
 							<li>
 								<FaPhone className="footer-icon" />
-								<a href="tel:+5511962659477">(11) 96265-9477</a>
+								<a href="tel:+55 19 98264-1602">(19) 98264-1602</a>
 							</li>
 							<li>
 								<FaWhatsapp className="footer-icon" />
-								<a href="https://wa.me/5511962659477" target="_blank" rel="noopener noreferrer">
+								<a href="https://wa.me/5519982641602" target="_blank" rel="noopener noreferrer">
 									WhatsApp
 								</a>
 							</li>
@@ -112,7 +112,7 @@ const Footer = () => {
 								<FaYoutube />
 							</a>
 							<a
-								href="https://wa.me/5511962659477"
+								href="https://wa.me/5519982641602"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="WhatsApp"
@@ -130,7 +130,7 @@ const Footer = () => {
 				<div className="footer-container">
 					<div className="footer-bottom-content">
 						<p className="copyright">
-							&copy; {currentYear} EGRIC - Espeleo Grupo Rio Claro.
+							&copy; {currentYear} EGRIC - Espeleo Grupo Rio Claro.{' '}
 							<br className="footer-break-mobile" />
 							Todos os direitos reservados.
 						</p>

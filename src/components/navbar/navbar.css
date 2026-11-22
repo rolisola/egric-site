@@ -37,13 +37,13 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #4a90e2, #67b8ff);
+  background: linear-gradient(90deg, var(--egric-charcoal-900), var(--egric-charcoal-800));
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
 
 .navbar-item a:hover {
-  color: #67b8ff;
+  color: var(--egric-charcoal-900);
 }
 
 .navbar-item a:hover::before {
@@ -51,12 +51,12 @@
 }
 
 .navbar-item a:active {
-  color: #4a90e2;
+  color: var(--egric-charcoal-900);
 }
 
 /* Active link style (você pode adicionar uma classe 'active' via JS) */
 .navbar-item a.active {
-  color: #67b8ff;
+  color: var(--egric-charcoal-900);
 }
 
 .navbar-item a.active::before {

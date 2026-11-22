@@ -7,7 +7,7 @@
 
 .comissoes-section .comissao-card {
 	background: rgba(255, 255, 255, 0.05);
-	border: 2px solid rgba(253, 200, 48, 0.2);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.2);
 	border-radius: 20px;
 	padding: 24px;
 	backdrop-filter: blur(10px);
@@ -16,21 +16,21 @@
 
 .comissoes-section .comissao-card:hover {
 	transform: translateY(-4px);
-	border-color: #fdc830;
-	box-shadow: 0 16px 32px rgba(253, 200, 48, 0.18);
+	border-color: var(--egric-charcoal-900);
+	box-shadow: 0 16px 32px rgba(var(--egric-charcoal-rgb), 0.18);
 }
 
 .comissoes-section .comissao-card h2 {
 	margin-top: 0;
 	margin-bottom: 12px;
-	color: #fdc830;
+	color: var(--egric-charcoal-900);
 	font-size: 1.6rem;
 }
 
 .comissoes-section .comissoes-info {
 	margin-top: 40px;
 	background: rgba(255, 255, 255, 0.04);
-	border: 2px solid rgba(253, 200, 48, 0.15);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.15);
 	border-radius: 20px;
 	padding: 24px;
 	backdrop-filter: blur(10px);

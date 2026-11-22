@@ -1,46 +1,8 @@
-/* Estilos do react-pdf */
-.react-pdf__Page__textContent {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	opacity: 0.2;
-	line-height: 1;
-}
-
-.react-pdf__Page__textContent span {
-	color: transparent;
-	position: absolute;
-	white-space: pre;
-	cursor: text;
-	transform-origin: 0% 0%;
-}
-
-.react-pdf__Page__annotations {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.react-pdf__Page__annotations .linkAnnotation>a,
-.react-pdf__Page__annotations .buttonWidgetAnnotation.pushButton>a {
-	position: absolute;
-	font-size: 1em;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 /* Seção Cartilhas */
 .cartilhas-section {
 	min-height: 100vh;
-	padding: 0 0 80px;
-	background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
+	padding: var(--header-height) 0 80px;
+	background: var(--egric-gradient-bg);
 	position: relative;
 }
 
@@ -52,8 +14,8 @@
 	right: 0;
 	bottom: 0;
 	background:
-		radial-gradient(circle at 20% 30%, rgba(253, 200, 48, 0.05) 0%, transparent 50%),
-		radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+		radial-gradient(circle at 20% 30%, rgba(var(--egric-charcoal-rgb), 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 80% 70%, rgba(var(--egric-charcoal-800-rgb), 0.05) 0%, transparent 50%);
 	pointer-events: none;
 }
 
@@ -75,10 +37,13 @@
 .cartilhas-header h1 {
 	font-size: 3rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #fdc830 0%, #ff6b35 100%);
+	background: linear-gradient(135deg, var(--egric-charcoal-900) 0%, var(--egric-charcoal-800) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	/* folga para as letras com perna (g, p, q, ç) não serem cortadas pelo background-clip */
+	line-height: 1.2;
+	padding-bottom: 0.12em;
 	margin-top: 0;
 	margin-bottom: 16px;
 	animation: fadeInDown 0.8s ease;
@@ -93,7 +58,7 @@
 }
 
 .link-educacao {
-	color: #fdc830;
+	color: var(--egric-charcoal-900);
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s ease;
@@ -101,8 +66,8 @@
 }
 
 .link-educacao:hover {
-	color: #ff6b35;
-	border-bottom-color: #ff6b35;
+	color: var(--egric-white);
+	border-bottom-color: var(--egric-white);
 }
 
 /* Lista de Cartilhas */
@@ -117,42 +82,12 @@
 	margin-right: auto;
 }
 
-/* Card de Cartilha */
+/* Card de Cartilha — visual vem de .card (styles.css); aqui só o layout */
 .cartilha-card {
-	background: rgba(255, 255, 255, 0.05);
-	border: 2px solid rgba(253, 200, 48, 0.2);
-	border-radius: 20px;
-	padding: 30px;
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	backdrop-filter: blur(10px);
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 	align-items: center;
-	position: relative;
-	overflow: hidden;
-}
-
-.cartilha-card::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 4px;
-	background: linear-gradient(90deg, #fdc830 0%, #ff6b35 100%);
-	transform: scaleX(0);
-	transition: transform 0.4s ease;
-}
-
-.cartilha-card:hover {
-	transform: translateX(10px);
-	border-color: #fdc830;
-	box-shadow: 0 20px 40px rgba(253, 200, 48, 0.3);
-}
-
-.cartilha-card:hover::before {
-	transform: scaleX(1);
 }
 
 /* Preview do PDF */
@@ -166,13 +101,13 @@
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
 	overflow: hidden;
-	border: 2px solid rgba(253, 200, 48, 0.2);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.2);
 	transition: all 0.3s ease;
 }
 
 .cartilha-card:hover .card-preview {
-	border-color: #fdc830;
-	box-shadow: 0 10px 30px rgba(253, 200, 48, 0.4);
+	border-color: var(--egric-charcoal-900);
+	box-shadow: 0 10px 30px rgba(var(--egric-charcoal-rgb), 0.4);
 }
 
 .card-preview .react-pdf__Document {
@@ -205,8 +140,8 @@
 .spinner-small {
 	width: 40px;
 	height: 40px;
-	border: 3px solid rgba(253, 200, 48, 0.2);
-	border-top-color: #fdc830;
+	border: 3px solid rgba(var(--egric-charcoal-rgb), 0.2);
+	border-top-color: var(--egric-charcoal-900);
 	border-radius: 50%;
 	animation: spin 1s linear infinite;
 }
@@ -233,7 +168,7 @@
 }
 
 .card-content h2 {
-	color: #fdc830;
+	color: #000000;
 	font-size: 1.8rem;
 	font-weight: 700;
 	margin-bottom: 16px;
@@ -281,23 +216,23 @@
 }
 
 .btn-primary {
-	background: linear-gradient(135deg, #ff6b35 0%, #fdc830 100%);
-	color: #1a1a2e;
+	background: linear-gradient(135deg, var(--egric-charcoal-800) 0%, var(--egric-charcoal-900) 100%);
+	color: var(--egric-white);
 }
 
 .btn-primary:hover {
-	background: linear-gradient(135deg, #ff8556 0%, #ffdb4d 100%);
+	background: linear-gradient(135deg, var(--egric-charcoal-700) 0%, var(--egric-charcoal-800) 100%);
 }
 
 .btn-secondary {
 	background: rgba(255, 255, 255, 0.08);
 	color: #fff;
-	border: 2px solid rgba(253, 200, 48, 0.4);
+	border: 2px solid rgba(var(--egric-charcoal-rgb), 0.4);
 }
 
 .btn-secondary:hover {
-	background: rgba(253, 200, 48, 0.15);
-	border-color: #fdc830;
+	background: rgba(var(--egric-charcoal-rgb), 0.15);
+	border-color: var(--egric-charcoal-900);
 }
 
 .badge {
@@ -307,7 +242,7 @@
 	padding: 10px 20px;
 	border-radius: 999px;
 	background: rgba(255, 255, 255, 0.05);
-	border: 2px dashed rgba(253, 200, 48, 0.3);
+	border: 2px dashed rgba(var(--egric-charcoal-rgb), 0.3);
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 0.95rem;
 	font-weight: 600;
@@ -317,206 +252,7 @@
 	font-size: 1.2em;
 }
 
-/* Modal do Visor de PDF */
-.pdf-viewer-modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.9);
-	z-index: 10000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
-	animation: fadeIn 0.3s ease;
-}
-
-.pdf-viewer-container {
-	background: #1a1a2e;
-	border-radius: 20px;
-	width: 100%;
-	max-width: 1200px;
-	max-height: 90vh;
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-	border: 2px solid rgba(253, 200, 48, 0.3);
-	overflow: hidden;
-}
-
-/* Header do Visor */
-.pdf-viewer-header {
-	background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
-	padding: 20px 30px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 2px solid rgba(253, 200, 48, 0.2);
-}
-
-.pdf-viewer-header h2 {
-	color: #fdc830;
-	font-size: 1.5rem;
-	font-weight: 700;
-	margin: 0;
-}
-
-.close-btn {
-	background: rgba(255, 255, 255, 0.1);
-	border: 2px solid rgba(253, 200, 48, 0.3);
-	color: #fff;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	font-size: 1.5rem;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.close-btn:hover {
-	background: rgba(255, 107, 53, 0.3);
-	border-color: #ff6b35;
-	transform: rotate(90deg);
-}
-
-/* Controles do Visor */
-.pdf-viewer-controls {
-	background: rgba(22, 33, 62, 0.8);
-	padding: 15px 30px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 20px;
-	flex-wrap: wrap;
-	border-bottom: 1px solid rgba(253, 200, 48, 0.1);
-}
-
-.controls-left,
-.controls-right {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.control-btn {
-	background: rgba(255, 255, 255, 0.1);
-	border: 1px solid rgba(253, 200, 48, 0.3);
-	color: #fff;
-	padding: 8px 16px;
-	border-radius: 8px;
-	font-size: 0.95rem;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	white-space: nowrap;
-}
-
-.control-btn:hover:not(:disabled) {
-	background: rgba(253, 200, 48, 0.2);
-	border-color: #fdc830;
-	transform: translateY(-2px);
-}
-
-.control-btn:disabled {
-	opacity: 0.3;
-	cursor: not-allowed;
-}
-
-.download-btn {
-	background: linear-gradient(135deg, #ff6b35 0%, #fdc830 100%);
-	color: #1a1a2e;
-	border: none;
-	text-decoration: none;
-}
-
-.download-btn:hover {
-	background: linear-gradient(135deg, #ff8556 0%, #ffdb4d 100%);
-}
-
-.page-info,
-.zoom-info {
-	color: rgba(255, 255, 255, 0.9);
-	font-weight: 600;
-	font-size: 0.95rem;
-	padding: 0 8px;
-}
-
-/* Conteúdo do PDF */
-.pdf-viewer-content {
-	flex: 1;
-	overflow: auto;
-	background: #0f0c29;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	padding: 30px;
-}
-
-.pdf-viewer-content .react-pdf__Document {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.pdf-viewer-content .react-pdf__Page {
-	max-width: 100%;
-	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-	background: white;
-}
-
-.pdf-viewer-content .react-pdf__Page canvas {
-	max-width: 100%;
-	height: auto !important;
-}
-
-/* Loading e Error States */
-.pdf-loading,
-.pdf-error {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 60px;
-	color: rgba(255, 255, 255, 0.8);
-	text-align: center;
-}
-
-.spinner {
-	width: 50px;
-	height: 50px;
-	border: 4px solid rgba(253, 200, 48, 0.2);
-	border-top-color: #fdc830;
-	border-radius: 50%;
-	animation: spin 1s linear infinite;
-	margin-bottom: 20px;
-}
-
-.pdf-error p {
-	font-size: 1.2rem;
-	margin-bottom: 10px;
-}
-
-.pdf-error small {
-	font-size: 0.9rem;
-	color: rgba(255, 255, 255, 0.5);
-}
-
 /* Animações */
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
 @keyframes fadeInDown {
 	from {
 		opacity: 0;
@@ -550,7 +286,7 @@
 /* Responsividade */
 @media (max-width: 768px) {
 	.cartilhas-section {
-		padding: 80px 0 60px;
+		padding: calc(var(--header-height) + 80px) 0 60px;
 	}
 
 	.cartilhas-header h1 {
@@ -569,10 +305,6 @@
 		flex-direction: column;
 		padding: 20px;
 		gap: 20px;
-	}
-
-	.cartilha-card:hover {
-		transform: translateY(-5px);
 	}
 
 	.card-preview {
@@ -604,44 +336,6 @@
 		justify-content: center;
 		box-sizing: border-box;
 	}
-
-	.pdf-viewer-modal {
-		padding: 10px;
-	}
-
-	.pdf-viewer-container {
-		max-height: 95vh;
-	}
-
-	.pdf-viewer-header {
-		padding: 15px 20px;
-	}
-
-	.pdf-viewer-header h2 {
-		font-size: 1.1rem;
-	}
-
-	.pdf-viewer-controls {
-		padding: 12px 15px;
-		flex-direction: column;
-		gap: 12px;
-	}
-
-	.controls-left,
-	.controls-right {
-		width: 100%;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.pdf-viewer-content {
-		padding: 15px;
-	}
-
-	.control-btn {
-		font-size: 0.85rem;
-		padding: 8px 12px;
-	}
 }
 
 @media (max-width: 480px) {
@@ -668,11 +362,5 @@
 
 	.card-content p {
 		font-size: 0.9rem;
-	}
-
-	.close-btn {
-		width: 35px;
-		height: 35px;
-		font-size: 1.2rem;
 	}
 }
