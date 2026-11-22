@@ -19,6 +19,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Cartilhas em PDF: ficam só localmente, nunca no repositório
+public/cartilhas/*.pdf
+
 # Build outputs
 dist
 dist-ssr
